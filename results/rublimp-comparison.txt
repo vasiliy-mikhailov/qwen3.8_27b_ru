@@ -1,0 +1,50 @@
+paradigm                                             rublimp-nvfp4            rublimp-gw
+add_new_suffix                                     100.0%   +18.33       100.0%   +18.48
+add_verb_prefix                                    100.0%   +16.29       100.0%   +16.29
+adposition_government                              100.0%    +9.89       100.0%    +9.90
+anaphor_agreement_gender                            94.0%    +5.21        95.0%    +5.08
+anaphor_agreement_number                            97.0%    +6.75        96.0%    +7.07
+change_declension_ending                            94.0%   +11.13        95.0%   +11.37
+change_declension_ending_has_dep                   100.0%   +13.53       100.0%   +13.69
+change_duration_aspect                              87.0%    +3.37        86.0%    +3.37
+change_repetition_aspect                            92.0%    +4.35        93.0%    +4.39
+change_verb_conjugation                            100.0%   +11.55       100.0%   +11.70
+change_verb_prefixes_order                          99.0%   +20.17        99.0%   +20.77
+clause_subj_predicate_agreement_gender              99.0%    +8.15       100.0%    +8.13
+clause_subj_predicate_agreement_number              98.0%    +9.12        97.0%    +9.12
+clause_subj_predicate_agreement_person             100.0%   +11.43       100.0%   +11.65
+conj_verb_tense                                     96.0%    +8.22        99.0%    +8.33
+deontic_imperative_aspect                           99.0%    +4.81        94.0%    +4.73
+external_possessor                                  63.0%    +1.33        62.0%    +1.05
+floating_quantifier_agreement_case                  95.0%    +8.57        94.0%    +8.59
+floating_quantifier_agreement_gender                91.0%    +6.50        90.0%    +6.68
+floating_quantifier_agreement_number                96.0%    +8.29        97.0%    +8.22
+genitive_subj_predicate_agreement_gender            95.0%    +7.26        95.0%    +7.32
+genitive_subj_predicate_agreement_number            99.0%    +8.23        99.0%    +8.35
+genitive_subj_predicate_agreement_person            98.0%   +10.41        99.0%   +10.50
+indefinite_pronoun_to_negative                      99.0%    +7.78        99.0%    +7.89
+negative_concord                                   100.0%   +14.38       100.0%   +14.35
+negative_pronoun_to_indefinite                      99.0%    +9.29        99.0%    +9.49
+nominalization_case                                 97.0%    +7.42       100.0%    +7.28
+noun_subj_predicate_agreement_gender                96.0%    +5.24        95.0%    +5.20
+noun_subj_predicate_agreement_number                94.0%    +5.83        96.0%    +6.15
+noun_subj_predicate_agreement_person                97.0%    +7.51        97.0%    +7.63
+np_agreement_case                                   99.0%    +9.72        99.0%    +9.81
+np_agreement_gender                                 95.0%    +7.50        94.0%    +7.48
+np_agreement_number                                 99.0%    +9.37        99.0%    +9.29
+single_verb_tense                                   94.0%    +5.69        95.0%    +5.73
+subj_predicate_agreement_gender_attractor           96.0%    +5.23        95.0%    +5.51
+subj_predicate_agreement_number_attractor           97.0%    +5.54        96.0%    +5.68
+tense_marker                                        91.0%    +6.78        90.0%    +6.75
+transitive_verb                                     96.0%   +11.98        96.0%   +12.03
+transitive_verb_iobject                             91.0%    +9.95        94.0%   +10.12
+transitive_verb_object                              80.0%    +6.61        76.0%    +6.74
+transitive_verb_passive                             92.0%   +12.40        93.0%   +12.07
+transitive_verb_subject                             85.0%    +8.32        82.0%    +8.22
+verb_acc_object                                     99.0%    +6.39        97.0%    +6.33
+verb_gen_object                                     96.0%    +7.16        96.0%    +7.18
+verb_ins_object                                    100.0%    +8.53        99.0%    +8.46
+----------------------------------------------------------------------------------------
+OVERALL                                             95.2%    +8.70        95.0%    +8.76
+
+колонки: точность на парах | средний зазор в натах (NLL_плохого − NLL_хорошего)
