@@ -1,0 +1,9 @@
+# Third-party datasets are downloaded, not redistributed.
+data/rublimp/
+data/corpora/
+# Model artifacts and any local scratch.
+*.ninfer
+*.gguf
+*.parquet
+__pycache__/
+.venv/
