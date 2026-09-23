@@ -1,0 +1,8 @@
+{
+ "rank": 16,
+ "accum": 2,
+ "lr": 0.0002,
+ "steps": 61,
+ "train_seconds": 305.6,
+ "tokens_seen": 249856
+}

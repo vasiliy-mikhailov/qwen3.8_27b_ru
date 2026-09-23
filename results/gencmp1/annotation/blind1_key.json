@@ -1,0 +1,802 @@
+{
+"T000": {
+"arm": "trained",
+"id": "p074",
+"kind": "explain_failure"
+},
+"T001": {
+"arm": "base",
+"id": "p042",
+"kind": "explain"
+},
+"T002": {
+"arm": "base",
+"id": "p000",
+"kind": "write_code"
+},
+"T003": {
+"arm": "trained",
+"id": "p013",
+"kind": "comment_code"
+},
+"T004": {
+"arm": "base",
+"id": "p040",
+"kind": "explain"
+},
+"T005": {
+"arm": "trained",
+"id": "p051",
+"kind": "spec"
+},
+"T006": {
+"arm": "base",
+"id": "p039",
+"kind": "review"
+},
+"T007": {
+"arm": "base",
+"id": "p043",
+"kind": "explain"
+},
+"T008": {
+"arm": "trained",
+"id": "p059",
+"kind": "spec"
+},
+"T009": {
+"arm": "trained",
+"id": "p011",
+"kind": "comment_code"
+},
+"T010": {
+"arm": "trained",
+"id": "p030",
+"kind": "review"
+},
+"T011": {
+"arm": "trained",
+"id": "p077",
+"kind": "explain_failure"
+},
+"T012": {
+"arm": "base",
+"id": "p070",
+"kind": "explain_failure"
+},
+"T013": {
+"arm": "trained",
+"id": "p064",
+"kind": "readme"
+},
+"T014": {
+"arm": "base",
+"id": "p028",
+"kind": "docstring"
+},
+"T015": {
+"arm": "trained",
+"id": "p068",
+"kind": "readme"
+},
+"T016": {
+"arm": "base",
+"id": "p049",
+"kind": "explain"
+},
+"T017": {
+"arm": "base",
+"id": "p073",
+"kind": "explain_failure"
+},
+"T018": {
+"arm": "trained",
+"id": "p066",
+"kind": "readme"
+},
+"T019": {
+"arm": "trained",
+"id": "p033",
+"kind": "review"
+},
+"T020": {
+"arm": "trained",
+"id": "p012",
+"kind": "comment_code"
+},
+"T021": {
+"arm": "base",
+"id": "p064",
+"kind": "readme"
+},
+"T022": {
+"arm": "base",
+"id": "p026",
+"kind": "docstring"
+},
+"T023": {
+"arm": "trained",
+"id": "p043",
+"kind": "explain"
+},
+"T024": {
+"arm": "base",
+"id": "p050",
+"kind": "spec"
+},
+"T025": {
+"arm": "trained",
+"id": "p024",
+"kind": "docstring"
+},
+"T026": {
+"arm": "base",
+"id": "p019",
+"kind": "comment_code"
+},
+"T027": {
+"arm": "trained",
+"id": "p029",
+"kind": "docstring"
+},
+"T028": {
+"arm": "base",
+"id": "p035",
+"kind": "review"
+},
+"T029": {
+"arm": "base",
+"id": "p046",
+"kind": "explain"
+},
+"T030": {
+"arm": "base",
+"id": "p017",
+"kind": "comment_code"
+},
+"T031": {
+"arm": "trained",
+"id": "p037",
+"kind": "review"
+},
+"T032": {
+"arm": "base",
+"id": "p059",
+"kind": "spec"
+},
+"T033": {
+"arm": "trained",
+"id": "p009",
+"kind": "write_code"
+},
+"T034": {
+"arm": "base",
+"id": "p045",
+"kind": "explain"
+},
+"T035": {
+"arm": "trained",
+"id": "p017",
+"kind": "comment_code"
+},
+"T036": {
+"arm": "trained",
+"id": "p042",
+"kind": "explain"
+},
+"T037": {
+"arm": "base",
+"id": "p067",
+"kind": "readme"
+},
+"T038": {
+"arm": "trained",
+"id": "p071",
+"kind": "explain_failure"
+},
+"T039": {
+"arm": "base",
+"id": "p044",
+"kind": "explain"
+},
+"T040": {
+"arm": "base",
+"id": "p058",
+"kind": "spec"
+},
+"T041": {
+"arm": "trained",
+"id": "p025",
+"kind": "docstring"
+},
+"T042": {
+"arm": "base",
+"id": "p004",
+"kind": "write_code"
+},
+"T043": {
+"arm": "trained",
+"id": "p048",
+"kind": "explain"
+},
+"T044": {
+"arm": "base",
+"id": "p047",
+"kind": "explain"
+},
+"T045": {
+"arm": "trained",
+"id": "p075",
+"kind": "explain_failure"
+},
+"T046": {
+"arm": "trained",
+"id": "p019",
+"kind": "comment_code"
+},
+"T047": {
+"arm": "trained",
+"id": "p034",
+"kind": "review"
+},
+"T048": {
+"arm": "trained",
+"id": "p035",
+"kind": "review"
+},
+"T049": {
+"arm": "trained",
+"id": "p065",
+"kind": "readme"
+},
+"T050": {
+"arm": "base",
+"id": "p013",
+"kind": "comment_code"
+},
+"T051": {
+"arm": "trained",
+"id": "p079",
+"kind": "explain_failure"
+},
+"T052": {
+"arm": "trained",
+"id": "p056",
+"kind": "spec"
+},
+"T053": {
+"arm": "trained",
+"id": "p078",
+"kind": "explain_failure"
+},
+"T054": {
+"arm": "base",
+"id": "p076",
+"kind": "explain_failure"
+},
+"T055": {
+"arm": "base",
+"id": "p011",
+"kind": "comment_code"
+},
+"T056": {
+"arm": "base",
+"id": "p016",
+"kind": "comment_code"
+},
+"T057": {
+"arm": "trained",
+"id": "p053",
+"kind": "spec"
+},
+"T058": {
+"arm": "base",
+"id": "p025",
+"kind": "docstring"
+},
+"T059": {
+"arm": "base",
+"id": "p023",
+"kind": "docstring"
+},
+"T060": {
+"arm": "base",
+"id": "p061",
+"kind": "readme"
+},
+"T061": {
+"arm": "base",
+"id": "p029",
+"kind": "docstring"
+},
+"T062": {
+"arm": "base",
+"id": "p002",
+"kind": "write_code"
+},
+"T063": {
+"arm": "trained",
+"id": "p001",
+"kind": "write_code"
+},
+"T064": {
+"arm": "trained",
+"id": "p038",
+"kind": "review"
+},
+"T065": {
+"arm": "trained",
+"id": "p063",
+"kind": "readme"
+},
+"T066": {
+"arm": "trained",
+"id": "p022",
+"kind": "docstring"
+},
+"T067": {
+"arm": "trained",
+"id": "p067",
+"kind": "readme"
+},
+"T068": {
+"arm": "trained",
+"id": "p036",
+"kind": "review"
+},
+"T069": {
+"arm": "base",
+"id": "p005",
+"kind": "write_code"
+},
+"T070": {
+"arm": "trained",
+"id": "p010",
+"kind": "comment_code"
+},
+"T071": {
+"arm": "base",
+"id": "p012",
+"kind": "comment_code"
+},
+"T072": {
+"arm": "base",
+"id": "p055",
+"kind": "spec"
+},
+"T073": {
+"arm": "base",
+"id": "p054",
+"kind": "spec"
+},
+"T074": {
+"arm": "base",
+"id": "p033",
+"kind": "review"
+},
+"T075": {
+"arm": "trained",
+"id": "p045",
+"kind": "explain"
+},
+"T076": {
+"arm": "base",
+"id": "p060",
+"kind": "readme"
+},
+"T077": {
+"arm": "trained",
+"id": "p021",
+"kind": "docstring"
+},
+"T078": {
+"arm": "trained",
+"id": "p057",
+"kind": "spec"
+},
+"T079": {
+"arm": "trained",
+"id": "p049",
+"kind": "explain"
+},
+"T080": {
+"arm": "trained",
+"id": "p062",
+"kind": "readme"
+},
+"T081": {
+"arm": "base",
+"id": "p036",
+"kind": "review"
+},
+"T082": {
+"arm": "trained",
+"id": "p050",
+"kind": "spec"
+},
+"T083": {
+"arm": "base",
+"id": "p037",
+"kind": "review"
+},
+"T084": {
+"arm": "base",
+"id": "p072",
+"kind": "explain_failure"
+},
+"T085": {
+"arm": "base",
+"id": "p003",
+"kind": "write_code"
+},
+"T086": {
+"arm": "base",
+"id": "p041",
+"kind": "explain"
+},
+"T087": {
+"arm": "trained",
+"id": "p073",
+"kind": "explain_failure"
+},
+"T088": {
+"arm": "base",
+"id": "p056",
+"kind": "spec"
+},
+"T089": {
+"arm": "base",
+"id": "p068",
+"kind": "readme"
+},
+"T090": {
+"arm": "base",
+"id": "p069",
+"kind": "readme"
+},
+"T091": {
+"arm": "trained",
+"id": "p070",
+"kind": "explain_failure"
+},
+"T092": {
+"arm": "trained",
+"id": "p023",
+"kind": "docstring"
+},
+"T093": {
+"arm": "base",
+"id": "p010",
+"kind": "comment_code"
+},
+"T094": {
+"arm": "base",
+"id": "p020",
+"kind": "docstring"
+},
+"T095": {
+"arm": "base",
+"id": "p051",
+"kind": "spec"
+},
+"T096": {
+"arm": "trained",
+"id": "p002",
+"kind": "write_code"
+},
+"T097": {
+"arm": "base",
+"id": "p079",
+"kind": "explain_failure"
+},
+"T098": {
+"arm": "base",
+"id": "p030",
+"kind": "review"
+},
+"T099": {
+"arm": "trained",
+"id": "p047",
+"kind": "explain"
+},
+"T100": {
+"arm": "base",
+"id": "p032",
+"kind": "review"
+},
+"T101": {
+"arm": "base",
+"id": "p075",
+"kind": "explain_failure"
+},
+"T102": {
+"arm": "base",
+"id": "p078",
+"kind": "explain_failure"
+},
+"T103": {
+"arm": "base",
+"id": "p031",
+"kind": "review"
+},
+"T104": {
+"arm": "base",
+"id": "p024",
+"kind": "docstring"
+},
+"T105": {
+"arm": "trained",
+"id": "p072",
+"kind": "explain_failure"
+},
+"T106": {
+"arm": "base",
+"id": "p009",
+"kind": "write_code"
+},
+"T107": {
+"arm": "base",
+"id": "p071",
+"kind": "explain_failure"
+},
+"T108": {
+"arm": "trained",
+"id": "p032",
+"kind": "review"
+},
+"T109": {
+"arm": "trained",
+"id": "p028",
+"kind": "docstring"
+},
+"T110": {
+"arm": "base",
+"id": "p065",
+"kind": "readme"
+},
+"T111": {
+"arm": "trained",
+"id": "p003",
+"kind": "write_code"
+},
+"T112": {
+"arm": "trained",
+"id": "p061",
+"kind": "readme"
+},
+"T113": {
+"arm": "trained",
+"id": "p000",
+"kind": "write_code"
+},
+"T114": {
+"arm": "base",
+"id": "p022",
+"kind": "docstring"
+},
+"T115": {
+"arm": "trained",
+"id": "p006",
+"kind": "write_code"
+},
+"T116": {
+"arm": "trained",
+"id": "p016",
+"kind": "comment_code"
+},
+"T117": {
+"arm": "base",
+"id": "p018",
+"kind": "comment_code"
+},
+"T118": {
+"arm": "base",
+"id": "p034",
+"kind": "review"
+},
+"T119": {
+"arm": "trained",
+"id": "p031",
+"kind": "review"
+},
+"T120": {
+"arm": "trained",
+"id": "p060",
+"kind": "readme"
+},
+"T121": {
+"arm": "trained",
+"id": "p015",
+"kind": "comment_code"
+},
+"T122": {
+"arm": "trained",
+"id": "p039",
+"kind": "review"
+},
+"T123": {
+"arm": "trained",
+"id": "p041",
+"kind": "explain"
+},
+"T124": {
+"arm": "trained",
+"id": "p055",
+"kind": "spec"
+},
+"T125": {
+"arm": "trained",
+"id": "p040",
+"kind": "explain"
+},
+"T126": {
+"arm": "trained",
+"id": "p020",
+"kind": "docstring"
+},
+"T127": {
+"arm": "trained",
+"id": "p058",
+"kind": "spec"
+},
+"T128": {
+"arm": "base",
+"id": "p077",
+"kind": "explain_failure"
+},
+"T129": {
+"arm": "base",
+"id": "p027",
+"kind": "docstring"
+},
+"T130": {
+"arm": "base",
+"id": "p066",
+"kind": "readme"
+},
+"T131": {
+"arm": "base",
+"id": "p038",
+"kind": "review"
+},
+"T132": {
+"arm": "trained",
+"id": "p026",
+"kind": "docstring"
+},
+"T133": {
+"arm": "trained",
+"id": "p005",
+"kind": "write_code"
+},
+"T134": {
+"arm": "trained",
+"id": "p054",
+"kind": "spec"
+},
+"T135": {
+"arm": "trained",
+"id": "p018",
+"kind": "comment_code"
+},
+"T136": {
+"arm": "base",
+"id": "p048",
+"kind": "explain"
+},
+"T137": {
+"arm": "base",
+"id": "p001",
+"kind": "write_code"
+},
+"T138": {
+"arm": "trained",
+"id": "p007",
+"kind": "write_code"
+},
+"T139": {
+"arm": "trained",
+"id": "p076",
+"kind": "explain_failure"
+},
+"T140": {
+"arm": "base",
+"id": "p007",
+"kind": "write_code"
+},
+"T141": {
+"arm": "base",
+"id": "p057",
+"kind": "spec"
+},
+"T142": {
+"arm": "trained",
+"id": "p004",
+"kind": "write_code"
+},
+"T143": {
+"arm": "base",
+"id": "p015",
+"kind": "comment_code"
+},
+"T144": {
+"arm": "base",
+"id": "p021",
+"kind": "docstring"
+},
+"T145": {
+"arm": "trained",
+"id": "p044",
+"kind": "explain"
+},
+"T146": {
+"arm": "base",
+"id": "p014",
+"kind": "comment_code"
+},
+"T147": {
+"arm": "trained",
+"id": "p069",
+"kind": "readme"
+},
+"T148": {
+"arm": "base",
+"id": "p053",
+"kind": "spec"
+},
+"T149": {
+"arm": "trained",
+"id": "p052",
+"kind": "spec"
+},
+"T150": {
+"arm": "base",
+"id": "p008",
+"kind": "write_code"
+},
+"T151": {
+"arm": "base",
+"id": "p006",
+"kind": "write_code"
+},
+"T152": {
+"arm": "base",
+"id": "p052",
+"kind": "spec"
+},
+"T153": {
+"arm": "trained",
+"id": "p046",
+"kind": "explain"
+},
+"T154": {
+"arm": "trained",
+"id": "p027",
+"kind": "docstring"
+},
+"T155": {
+"arm": "base",
+"id": "p062",
+"kind": "readme"
+},
+"T156": {
+"arm": "trained",
+"id": "p014",
+"kind": "comment_code"
+},
+"T157": {
+"arm": "base",
+"id": "p074",
+"kind": "explain_failure"
+},
+"T158": {
+"arm": "base",
+"id": "p063",
+"kind": "readme"
+},
+"T159": {
+"arm": "trained",
+"id": "p008",
+"kind": "write_code"
+}
+}
