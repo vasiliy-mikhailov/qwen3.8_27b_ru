@@ -112,6 +112,23 @@ def _auto_round_with_accumulation(*args, **kwargs):
 
 _ar_base.AutoRound = _auto_round_with_accumulation
 
+# llm-compressor tells AutoRound to skip only target-matching layers that ended
+# up without a scheme; every other Linear in the block falls under AutoRound's
+# default scheme. With scheme="NVFP4" that made it tune attention and the
+# linear-attention projections as W4A4 too (8/8 and 7/7 layers per block in run
+# r1), although production keeps them in FP8, so the MLP rounding was fitted
+# against a context far noisier than the one it runs in. Here every Linear
+# without a quantization scheme is ignored and stays bf16, which is close to FP8.
+# AutoRound matches these names as substrings of the wrapped block's names.
+
+
+def _unquantized_linears(self, block):
+    return [n for n, m in block.named_modules()
+            if isinstance(m, torch.nn.Linear) and getattr(m, "quantization_scheme", None) is None]
+
+
+AutoRoundModifier.get_unquantized_layer_names = _unquantized_linears
+
 rows = [json.loads(l) for l in open(a.calib, encoding="utf-8")][: a.nsamples]
 seqlen = len(rows[0]["input_ids"])
 ds = Dataset.from_dict({

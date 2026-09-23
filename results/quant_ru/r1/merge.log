@@ -1,0 +1,4 @@
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+replaced 672 tensors in 168 matrices
+FP4 codes changed: median 22.2%, min 19.3%, max 38.6%
+activation scale new/prod: median 0.989, min 0.206, max 2.093; kept: safe, 32 of 168 matrices would clip harder than production

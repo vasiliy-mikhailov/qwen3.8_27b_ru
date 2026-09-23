@@ -20,6 +20,11 @@ each matrix keeps whichever divisor is smaller, i.e. the larger amax. The gain
 from a tighter divisor is small anyway: it only refines FP8 group scales that
 would otherwise fall into E4M3 subnormals.
 
+Clipping is real in ninfer: each 16-value group gets the E4M3 scale
+divisor * max_abs / 6 with saturation at 448, so inputs above the static amax
+are cut to it. --weights prod keeps production's FP4 weights and takes only the
+activation scales, which isolates what the scales alone are worth.
+
 Usage: merge_nvfp4.py --base UNSLOTH_NVFP4_DIR --ar AUTOROUND_DIR [--ar ...] --out DIR
 """
 import argparse, glob, json, os, shutil, statistics
@@ -35,6 +40,7 @@ ap.add_argument("--base", required=True)
 ap.add_argument("--ar", required=True, action="append")
 ap.add_argument("--out", required=True)
 ap.add_argument("--act-scale", choices=("safe", "new", "prod"), default="safe")
+ap.add_argument("--weights", choices=("new", "prod"), default="new")
 a = ap.parse_args()
 
 new = {}
@@ -68,8 +74,11 @@ with safe_open(src, "pt") as s:
                 r["codes_changed"] = round(diff.item() / (2 * n.numel()), 4)
             elif suffix in ("weight_global_scale", "input_global_scale"):
                 r[suffix + "_ratio"] = round(n.item() / t.item(), 4)
-            if suffix == "input_global_scale" and a.act_scale != "new":
-                n = t if a.act_scale == "prod" else torch.minimum(n, t)
+            if suffix == "input_global_scale":
+                if a.act_scale != "new":
+                    n = t if a.act_scale == "prod" else torch.minimum(n, t)
+            elif a.weights == "prod":
+                n = t
             t = n
         out[k] = t
 
@@ -84,7 +93,7 @@ for f in os.listdir(a.base):
 layers = sorted(report.items(), key=lambda kv: [int(x) if x.isdigit() else x for x in kv[0].split(".")])
 with open(os.path.join(a.out, "merge_report.json"), "w") as f:
     json.dump({"base": os.path.abspath(a.base), "autoround": [os.path.abspath(d) for d in a.ar],
-               "replaced_tensors": len(new), "act_scale": a.act_scale, "matrices": dict(layers)}, f, indent=1)
+               "replaced_tensors": len(new), "act_scale": a.act_scale, "weights": a.weights, "matrices": dict(layers)}, f, indent=1)
 cc = [r["codes_changed"] for _, r in layers if "codes_changed" in r]
 ig = [r["input_global_scale_ratio"] for _, r in layers if "input_global_scale_ratio" in r]
 print(f"replaced {len(new)} tensors in {len(layers)} matrices")
