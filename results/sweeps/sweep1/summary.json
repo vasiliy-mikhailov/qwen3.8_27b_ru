@@ -1,0 +1,125 @@
+{
+ "base_ppl": {
+  "chinese_reference": 6.877547152334411,
+  "english_long_form": 6.91527747437856,
+  "english_reference": 5.635199979538768,
+  "ninfer_code": 1.9332157316906897,
+  "russian_code_register": 3.191586440026112,
+  "russian_reference": 3.9146448349114755
+ },
+ "eval_seconds": 58.73649883270264,
+ "runs": [
+  {
+   "tag": "lr5e-05_acc4",
+   "lr": 5e-05,
+   "accum": 4,
+   "rank": 16,
+   "reset_ok": true,
+   "steps": 113,
+   "train_seconds": 302.0,
+   "tokens_seen": 925696,
+   "train_loss_first5": 1.3412010669708252,
+   "train_loss_last5": 1.256077265739441,
+   "eval_ppl": {
+    "chinese_reference": 6.844515305326808,
+    "english_long_form": 6.877149425609338,
+    "english_reference": 5.412950858585463,
+    "ninfer_code": 1.9288381183932026,
+    "russian_code_register": 3.106000230627684,
+    "russian_reference": 3.89065243250102
+   },
+   "eval_delta_nll": {
+    "chinese_reference": -0.004814423620700836,
+    "english_long_form": -0.005528852343559265,
+    "english_reference": -0.04023824632167816,
+    "ninfer_code": -0.002266988158226013,
+    "russian_code_register": -0.027182310819625854,
+    "russian_reference": -0.00614774227142334
+   }
+  },
+  {
+   "tag": "lr0.0001_acc4",
+   "lr": 0.0001,
+   "accum": 4,
+   "rank": 16,
+   "reset_ok": true,
+   "steps": 126,
+   "train_seconds": 302.2,
+   "tokens_seen": 1032192,
+   "train_loss_first5": 1.341088557243347,
+   "train_loss_last5": 1.5456259727478028,
+   "eval_ppl": {
+    "chinese_reference": 6.827991286871292,
+    "english_long_form": 6.880595787776107,
+    "english_reference": 5.376267759144645,
+    "ninfer_code": 1.9298599057927937,
+    "russian_code_register": 3.1027119909527108,
+    "russian_reference": 3.884637401960206
+   },
+   "eval_delta_nll": {
+    "chinese_reference": -0.0072315409779548645,
+    "english_long_form": -0.005027845501899719,
+    "english_reference": -0.04703822731971741,
+    "ninfer_code": -0.0017373859882354736,
+    "russian_code_register": -0.02824154496192932,
+    "russian_reference": -0.00769495964050293
+   }
+  },
+  {
+   "tag": "lr0.0002_acc4",
+   "lr": 0.0002,
+   "accum": 4,
+   "rank": 16,
+   "reset_ok": true,
+   "steps": 126,
+   "train_seconds": 302.9,
+   "tokens_seen": 1032192,
+   "train_loss_first5": 1.3397460222244262,
+   "train_loss_last5": 1.5367916107177735,
+   "eval_ppl": {
+    "chinese_reference": 6.830228466221225,
+    "english_long_form": 6.885770826909727,
+    "english_reference": 5.3563396746623875,
+    "ninfer_code": 1.9297005546057497,
+    "russian_code_register": 3.1018365578850022,
+    "russian_reference": 3.886876193879489
+   },
+   "eval_delta_nll": {
+    "chinese_reference": -0.006903946399688721,
+    "english_long_form": -0.004276007413864136,
+    "english_reference": -0.05075179040431976,
+    "ninfer_code": -0.0018199607729911804,
+    "russian_code_register": -0.02852373570203781,
+    "russian_reference": -0.00711880624294281
+   }
+  },
+  {
+   "tag": "lr0.0004_acc4",
+   "lr": 0.0004,
+   "accum": 4,
+   "rank": 16,
+   "reset_ok": true,
+   "steps": 125,
+   "train_seconds": 302.7,
+   "tokens_seen": 1024000,
+   "train_loss_first5": 1.3351951360702514,
+   "train_loss_last5": 1.4840239763259888,
+   "eval_ppl": {
+    "chinese_reference": 6.861513071216094,
+    "english_long_form": 6.918768408825558,
+    "english_reference": 5.363322747062051,
+    "ninfer_code": 1.9405051345677948,
+    "russian_code_register": 3.136833014309396,
+    "russian_reference": 3.9144678573373635
+   },
+   "eval_delta_nll": {
+    "chinese_reference": -0.002334088087081909,
+    "english_long_form": 0.0005046874284744263,
+    "english_reference": -0.04944893717765808,
+    "ninfer_code": 0.0037635192275047302,
+    "russian_code_register": -0.01730441302061081,
+    "russian_reference": -4.521012306213379e-05
+   }
+  }
+ ]
+}

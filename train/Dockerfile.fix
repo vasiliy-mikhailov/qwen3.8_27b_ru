@@ -1,0 +1,6 @@
+FROM qwen-train:unsloth
+# Triton JIT-compiles a small CUDA helper with gcc on first use, which needs the
+# Python development headers. Without them the whole run dies before step 1.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      python3-dev build-essential && rm -rf /var/lib/apt/lists/*
+RUN test -f /usr/include/python3.12/Python.h && echo "Python.h ok"

@@ -1,0 +1,3 @@
+{"train_seconds": 0, "step": 0, "tokens": 0, "nll": {"russian_code_comments": 1.6615830957889557, "russian_code_register": 1.1991061965624492}}
+{"train_seconds": 103.2, "step": 12, "tokens": 98304, "nll": {"russian_code_comments": 1.6504203379154205, "russian_code_register": 1.1700319995482762}}
+{"train_seconds": 206.5, "step": 24, "tokens": 196608, "nll": {"russian_code_comments": 1.64036625623703, "russian_code_register": 1.1631946414709091}}

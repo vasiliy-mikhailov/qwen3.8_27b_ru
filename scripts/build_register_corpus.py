@@ -141,5 +141,12 @@ if __name__ == "__main__":
             fn = os.path.join(dest, f"{name}-{split}.txt")
             with open(fn, "w", encoding="utf-8") as fh:
                 fh.write("\n\n".join(part))
+            # Documents themselves contain blank lines, so the .txt form cannot
+            # be split back into documents: a post falls apart into paragraphs
+            # and its code block detaches from its explanation. Training reads
+            # the JSONL, one whole document per line.
+            with open(os.path.join(dest, f"{name}-{split}.jsonl"), "w", encoding="utf-8") as fh:
+                for d in part:
+                    fh.write(json.dumps({"text": d}, ensure_ascii=False) + "\n")
             w = sum(len(CYR.findall(d)) for d in part) // 6
             print(f"{name}-{split}: документов {len(part)}, ~{w} русских слов -> {fn}")
