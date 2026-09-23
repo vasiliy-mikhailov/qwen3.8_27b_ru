@@ -1,0 +1,1182 @@
+{
+"T000": {
+"arm": "nvfp4_prose",
+"id": "s108",
+"kind": "story"
+},
+"T001": {
+"arm": "nvfp4_prose",
+"id": "s073",
+"kind": "letter"
+},
+"T002": {
+"arm": "q8_prose",
+"id": "s049",
+"kind": "letter"
+},
+"T003": {
+"arm": "q8_prose",
+"id": "s043",
+"kind": "diary"
+},
+"T004": {
+"arm": "nvfp4_prose",
+"id": "s081",
+"kind": "letter"
+},
+"T005": {
+"arm": "q8_prose",
+"id": "s028",
+"kind": "story"
+},
+"T006": {
+"arm": "nvfp4_prose",
+"id": "s052",
+"kind": "story"
+},
+"T007": {
+"arm": "nvfp4_prose",
+"id": "s004",
+"kind": "story"
+},
+"T008": {
+"arm": "nvfp4_prose",
+"id": "s080",
+"kind": "story"
+},
+"T009": {
+"arm": "nvfp4_prose",
+"id": "s091",
+"kind": "diary"
+},
+"T010": {
+"arm": "q8_prose",
+"id": "s016",
+"kind": "story"
+},
+"T011": {
+"arm": "q8_prose",
+"id": "s067",
+"kind": "diary"
+},
+"T012": {
+"arm": "nvfp4_prose",
+"id": "s103",
+"kind": "diary"
+},
+"T013": {
+"arm": "q8_prose",
+"id": "s071",
+"kind": "diary"
+},
+"T014": {
+"arm": "nvfp4_prose",
+"id": "s079",
+"kind": "diary"
+},
+"T015": {
+"arm": "q8_prose",
+"id": "s033",
+"kind": "letter"
+},
+"T016": {
+"arm": "nvfp4_prose",
+"id": "s069",
+"kind": "letter"
+},
+"T017": {
+"arm": "nvfp4_prose",
+"id": "s019",
+"kind": "diary"
+},
+"T018": {
+"arm": "q8_prose",
+"id": "s045",
+"kind": "letter"
+},
+"T019": {
+"arm": "q8_prose",
+"id": "s056",
+"kind": "story"
+},
+"T020": {
+"arm": "q8_prose",
+"id": "s022",
+"kind": "description"
+},
+"T021": {
+"arm": "nvfp4_prose",
+"id": "s106",
+"kind": "description"
+},
+"T022": {
+"arm": "q8_prose",
+"id": "s041",
+"kind": "letter"
+},
+"T023": {
+"arm": "q8_prose",
+"id": "s091",
+"kind": "diary"
+},
+"T024": {
+"arm": "nvfp4_prose",
+"id": "s041",
+"kind": "letter"
+},
+"T025": {
+"arm": "q8_prose",
+"id": "s086",
+"kind": "description"
+},
+"T026": {
+"arm": "nvfp4_prose",
+"id": "s013",
+"kind": "letter"
+},
+"T027": {
+"arm": "nvfp4_prose",
+"id": "s095",
+"kind": "diary"
+},
+"T028": {
+"arm": "q8_prose",
+"id": "s042",
+"kind": "description"
+},
+"T029": {
+"arm": "q8_prose",
+"id": "s002",
+"kind": "description"
+},
+"T030": {
+"arm": "q8_prose",
+"id": "s116",
+"kind": "story"
+},
+"T031": {
+"arm": "q8_prose",
+"id": "s076",
+"kind": "story"
+},
+"T032": {
+"arm": "q8_prose",
+"id": "s000",
+"kind": "story"
+},
+"T033": {
+"arm": "q8_prose",
+"id": "s035",
+"kind": "diary"
+},
+"T034": {
+"arm": "nvfp4_prose",
+"id": "s062",
+"kind": "description"
+},
+"T035": {
+"arm": "q8_prose",
+"id": "s039",
+"kind": "diary"
+},
+"T036": {
+"arm": "q8_prose",
+"id": "s117",
+"kind": "letter"
+},
+"T037": {
+"arm": "q8_prose",
+"id": "s104",
+"kind": "story"
+},
+"T038": {
+"arm": "q8_prose",
+"id": "s050",
+"kind": "description"
+},
+"T039": {
+"arm": "q8_prose",
+"id": "s034",
+"kind": "description"
+},
+"T040": {
+"arm": "nvfp4_prose",
+"id": "s096",
+"kind": "story"
+},
+"T041": {
+"arm": "nvfp4_prose",
+"id": "s074",
+"kind": "description"
+},
+"T042": {
+"arm": "nvfp4_prose",
+"id": "s047",
+"kind": "diary"
+},
+"T043": {
+"arm": "nvfp4_prose",
+"id": "s060",
+"kind": "story"
+},
+"T044": {
+"arm": "nvfp4_prose",
+"id": "s022",
+"kind": "description"
+},
+"T045": {
+"arm": "nvfp4_prose",
+"id": "s058",
+"kind": "description"
+},
+"T046": {
+"arm": "q8_prose",
+"id": "s068",
+"kind": "story"
+},
+"T047": {
+"arm": "q8_prose",
+"id": "s026",
+"kind": "description"
+},
+"T048": {
+"arm": "nvfp4_prose",
+"id": "s099",
+"kind": "diary"
+},
+"T049": {
+"arm": "q8_prose",
+"id": "s109",
+"kind": "letter"
+},
+"T050": {
+"arm": "nvfp4_prose",
+"id": "s085",
+"kind": "letter"
+},
+"T051": {
+"arm": "nvfp4_prose",
+"id": "s044",
+"kind": "story"
+},
+"T052": {
+"arm": "q8_prose",
+"id": "s080",
+"kind": "story"
+},
+"T053": {
+"arm": "q8_prose",
+"id": "s089",
+"kind": "letter"
+},
+"T054": {
+"arm": "nvfp4_prose",
+"id": "s077",
+"kind": "letter"
+},
+"T055": {
+"arm": "nvfp4_prose",
+"id": "s102",
+"kind": "description"
+},
+"T056": {
+"arm": "nvfp4_prose",
+"id": "s010",
+"kind": "description"
+},
+"T057": {
+"arm": "nvfp4_prose",
+"id": "s109",
+"kind": "letter"
+},
+"T058": {
+"arm": "q8_prose",
+"id": "s101",
+"kind": "letter"
+},
+"T059": {
+"arm": "q8_prose",
+"id": "s025",
+"kind": "letter"
+},
+"T060": {
+"arm": "q8_prose",
+"id": "s055",
+"kind": "diary"
+},
+"T061": {
+"arm": "nvfp4_prose",
+"id": "s007",
+"kind": "diary"
+},
+"T062": {
+"arm": "q8_prose",
+"id": "s047",
+"kind": "diary"
+},
+"T063": {
+"arm": "q8_prose",
+"id": "s012",
+"kind": "story"
+},
+"T064": {
+"arm": "nvfp4_prose",
+"id": "s005",
+"kind": "letter"
+},
+"T065": {
+"arm": "nvfp4_prose",
+"id": "s092",
+"kind": "story"
+},
+"T066": {
+"arm": "nvfp4_prose",
+"id": "s094",
+"kind": "description"
+},
+"T067": {
+"arm": "q8_prose",
+"id": "s031",
+"kind": "diary"
+},
+"T068": {
+"arm": "nvfp4_prose",
+"id": "s051",
+"kind": "diary"
+},
+"T069": {
+"arm": "nvfp4_prose",
+"id": "s015",
+"kind": "diary"
+},
+"T070": {
+"arm": "nvfp4_prose",
+"id": "s111",
+"kind": "diary"
+},
+"T071": {
+"arm": "q8_prose",
+"id": "s095",
+"kind": "diary"
+},
+"T072": {
+"arm": "q8_prose",
+"id": "s100",
+"kind": "story"
+},
+"T073": {
+"arm": "q8_prose",
+"id": "s029",
+"kind": "letter"
+},
+"T074": {
+"arm": "nvfp4_prose",
+"id": "s063",
+"kind": "diary"
+},
+"T075": {
+"arm": "q8_prose",
+"id": "s065",
+"kind": "letter"
+},
+"T076": {
+"arm": "nvfp4_prose",
+"id": "s075",
+"kind": "diary"
+},
+"T077": {
+"arm": "q8_prose",
+"id": "s059",
+"kind": "diary"
+},
+"T078": {
+"arm": "q8_prose",
+"id": "s102",
+"kind": "description"
+},
+"T079": {
+"arm": "nvfp4_prose",
+"id": "s009",
+"kind": "letter"
+},
+"T080": {
+"arm": "q8_prose",
+"id": "s011",
+"kind": "diary"
+},
+"T081": {
+"arm": "q8_prose",
+"id": "s078",
+"kind": "description"
+},
+"T082": {
+"arm": "q8_prose",
+"id": "s113",
+"kind": "letter"
+},
+"T083": {
+"arm": "q8_prose",
+"id": "s097",
+"kind": "letter"
+},
+"T084": {
+"arm": "q8_prose",
+"id": "s079",
+"kind": "diary"
+},
+"T085": {
+"arm": "nvfp4_prose",
+"id": "s082",
+"kind": "description"
+},
+"T086": {
+"arm": "q8_prose",
+"id": "s070",
+"kind": "description"
+},
+"T087": {
+"arm": "q8_prose",
+"id": "s036",
+"kind": "story"
+},
+"T088": {
+"arm": "nvfp4_prose",
+"id": "s001",
+"kind": "letter"
+},
+"T089": {
+"arm": "q8_prose",
+"id": "s046",
+"kind": "description"
+},
+"T090": {
+"arm": "nvfp4_prose",
+"id": "s078",
+"kind": "description"
+},
+"T091": {
+"arm": "nvfp4_prose",
+"id": "s053",
+"kind": "letter"
+},
+"T092": {
+"arm": "nvfp4_prose",
+"id": "s115",
+"kind": "diary"
+},
+"T093": {
+"arm": "nvfp4_prose",
+"id": "s002",
+"kind": "description"
+},
+"T094": {
+"arm": "q8_prose",
+"id": "s004",
+"kind": "story"
+},
+"T095": {
+"arm": "q8_prose",
+"id": "s081",
+"kind": "letter"
+},
+"T096": {
+"arm": "nvfp4_prose",
+"id": "s066",
+"kind": "description"
+},
+"T097": {
+"arm": "nvfp4_prose",
+"id": "s029",
+"kind": "letter"
+},
+"T098": {
+"arm": "q8_prose",
+"id": "s018",
+"kind": "description"
+},
+"T099": {
+"arm": "q8_prose",
+"id": "s093",
+"kind": "letter"
+},
+"T100": {
+"arm": "nvfp4_prose",
+"id": "s039",
+"kind": "diary"
+},
+"T101": {
+"arm": "q8_prose",
+"id": "s013",
+"kind": "letter"
+},
+"T102": {
+"arm": "nvfp4_prose",
+"id": "s023",
+"kind": "diary"
+},
+"T103": {
+"arm": "nvfp4_prose",
+"id": "s110",
+"kind": "description"
+},
+"T104": {
+"arm": "nvfp4_prose",
+"id": "s117",
+"kind": "letter"
+},
+"T105": {
+"arm": "q8_prose",
+"id": "s090",
+"kind": "description"
+},
+"T106": {
+"arm": "nvfp4_prose",
+"id": "s036",
+"kind": "story"
+},
+"T107": {
+"arm": "nvfp4_prose",
+"id": "s105",
+"kind": "letter"
+},
+"T108": {
+"arm": "nvfp4_prose",
+"id": "s065",
+"kind": "letter"
+},
+"T109": {
+"arm": "q8_prose",
+"id": "s099",
+"kind": "diary"
+},
+"T110": {
+"arm": "nvfp4_prose",
+"id": "s056",
+"kind": "story"
+},
+"T111": {
+"arm": "q8_prose",
+"id": "s111",
+"kind": "diary"
+},
+"T112": {
+"arm": "q8_prose",
+"id": "s005",
+"kind": "letter"
+},
+"T113": {
+"arm": "nvfp4_prose",
+"id": "s037",
+"kind": "letter"
+},
+"T114": {
+"arm": "nvfp4_prose",
+"id": "s061",
+"kind": "letter"
+},
+"T115": {
+"arm": "q8_prose",
+"id": "s083",
+"kind": "diary"
+},
+"T116": {
+"arm": "q8_prose",
+"id": "s060",
+"kind": "story"
+},
+"T117": {
+"arm": "nvfp4_prose",
+"id": "s072",
+"kind": "story"
+},
+"T118": {
+"arm": "nvfp4_prose",
+"id": "s097",
+"kind": "letter"
+},
+"T119": {
+"arm": "q8_prose",
+"id": "s096",
+"kind": "story"
+},
+"T120": {
+"arm": "nvfp4_prose",
+"id": "s031",
+"kind": "diary"
+},
+"T121": {
+"arm": "q8_prose",
+"id": "s058",
+"kind": "description"
+},
+"T122": {
+"arm": "q8_prose",
+"id": "s023",
+"kind": "diary"
+},
+"T123": {
+"arm": "nvfp4_prose",
+"id": "s059",
+"kind": "diary"
+},
+"T124": {
+"arm": "q8_prose",
+"id": "s032",
+"kind": "story"
+},
+"T125": {
+"arm": "nvfp4_prose",
+"id": "s035",
+"kind": "diary"
+},
+"T126": {
+"arm": "q8_prose",
+"id": "s051",
+"kind": "diary"
+},
+"T127": {
+"arm": "q8_prose",
+"id": "s092",
+"kind": "story"
+},
+"T128": {
+"arm": "nvfp4_prose",
+"id": "s084",
+"kind": "story"
+},
+"T129": {
+"arm": "nvfp4_prose",
+"id": "s000",
+"kind": "story"
+},
+"T130": {
+"arm": "q8_prose",
+"id": "s009",
+"kind": "letter"
+},
+"T131": {
+"arm": "q8_prose",
+"id": "s073",
+"kind": "letter"
+},
+"T132": {
+"arm": "nvfp4_prose",
+"id": "s064",
+"kind": "story"
+},
+"T133": {
+"arm": "q8_prose",
+"id": "s030",
+"kind": "description"
+},
+"T134": {
+"arm": "nvfp4_prose",
+"id": "s028",
+"kind": "story"
+},
+"T135": {
+"arm": "nvfp4_prose",
+"id": "s017",
+"kind": "letter"
+},
+"T136": {
+"arm": "nvfp4_prose",
+"id": "s054",
+"kind": "description"
+},
+"T137": {
+"arm": "nvfp4_prose",
+"id": "s032",
+"kind": "story"
+},
+"T138": {
+"arm": "q8_prose",
+"id": "s010",
+"kind": "description"
+},
+"T139": {
+"arm": "nvfp4_prose",
+"id": "s021",
+"kind": "letter"
+},
+"T140": {
+"arm": "q8_prose",
+"id": "s024",
+"kind": "story"
+},
+"T141": {
+"arm": "q8_prose",
+"id": "s110",
+"kind": "description"
+},
+"T142": {
+"arm": "q8_prose",
+"id": "s108",
+"kind": "story"
+},
+"T143": {
+"arm": "nvfp4_prose",
+"id": "s071",
+"kind": "diary"
+},
+"T144": {
+"arm": "nvfp4_prose",
+"id": "s093",
+"kind": "letter"
+},
+"T145": {
+"arm": "nvfp4_prose",
+"id": "s003",
+"kind": "diary"
+},
+"T146": {
+"arm": "q8_prose",
+"id": "s003",
+"kind": "diary"
+},
+"T147": {
+"arm": "q8_prose",
+"id": "s054",
+"kind": "description"
+},
+"T148": {
+"arm": "nvfp4_prose",
+"id": "s027",
+"kind": "diary"
+},
+"T149": {
+"arm": "q8_prose",
+"id": "s072",
+"kind": "story"
+},
+"T150": {
+"arm": "nvfp4_prose",
+"id": "s100",
+"kind": "story"
+},
+"T151": {
+"arm": "q8_prose",
+"id": "s075",
+"kind": "diary"
+},
+"T152": {
+"arm": "nvfp4_prose",
+"id": "s076",
+"kind": "story"
+},
+"T153": {
+"arm": "nvfp4_prose",
+"id": "s090",
+"kind": "description"
+},
+"T154": {
+"arm": "q8_prose",
+"id": "s082",
+"kind": "description"
+},
+"T155": {
+"arm": "nvfp4_prose",
+"id": "s048",
+"kind": "story"
+},
+"T156": {
+"arm": "q8_prose",
+"id": "s112",
+"kind": "story"
+},
+"T157": {
+"arm": "nvfp4_prose",
+"id": "s018",
+"kind": "description"
+},
+"T158": {
+"arm": "nvfp4_prose",
+"id": "s020",
+"kind": "story"
+},
+"T159": {
+"arm": "q8_prose",
+"id": "s017",
+"kind": "letter"
+},
+"T160": {
+"arm": "nvfp4_prose",
+"id": "s116",
+"kind": "story"
+},
+"T161": {
+"arm": "q8_prose",
+"id": "s020",
+"kind": "story"
+},
+"T162": {
+"arm": "q8_prose",
+"id": "s040",
+"kind": "story"
+},
+"T163": {
+"arm": "q8_prose",
+"id": "s103",
+"kind": "diary"
+},
+"T164": {
+"arm": "nvfp4_prose",
+"id": "s040",
+"kind": "story"
+},
+"T165": {
+"arm": "q8_prose",
+"id": "s061",
+"kind": "letter"
+},
+"T166": {
+"arm": "q8_prose",
+"id": "s064",
+"kind": "story"
+},
+"T167": {
+"arm": "nvfp4_prose",
+"id": "s033",
+"kind": "letter"
+},
+"T168": {
+"arm": "nvfp4_prose",
+"id": "s038",
+"kind": "description"
+},
+"T169": {
+"arm": "nvfp4_prose",
+"id": "s112",
+"kind": "story"
+},
+"T170": {
+"arm": "nvfp4_prose",
+"id": "s113",
+"kind": "letter"
+},
+"T171": {
+"arm": "q8_prose",
+"id": "s105",
+"kind": "letter"
+},
+"T172": {
+"arm": "q8_prose",
+"id": "s019",
+"kind": "diary"
+},
+"T173": {
+"arm": "nvfp4_prose",
+"id": "s088",
+"kind": "story"
+},
+"T174": {
+"arm": "q8_prose",
+"id": "s114",
+"kind": "description"
+},
+"T175": {
+"arm": "nvfp4_prose",
+"id": "s067",
+"kind": "diary"
+},
+"T176": {
+"arm": "nvfp4_prose",
+"id": "s049",
+"kind": "letter"
+},
+"T177": {
+"arm": "q8_prose",
+"id": "s115",
+"kind": "diary"
+},
+"T178": {
+"arm": "nvfp4_prose",
+"id": "s043",
+"kind": "diary"
+},
+"T179": {
+"arm": "q8_prose",
+"id": "s044",
+"kind": "story"
+},
+"T180": {
+"arm": "nvfp4_prose",
+"id": "s055",
+"kind": "diary"
+},
+"T181": {
+"arm": "q8_prose",
+"id": "s037",
+"kind": "letter"
+},
+"T182": {
+"arm": "q8_prose",
+"id": "s069",
+"kind": "letter"
+},
+"T183": {
+"arm": "nvfp4_prose",
+"id": "s098",
+"kind": "description"
+},
+"T184": {
+"arm": "nvfp4_prose",
+"id": "s089",
+"kind": "letter"
+},
+"T185": {
+"arm": "nvfp4_prose",
+"id": "s012",
+"kind": "story"
+},
+"T186": {
+"arm": "nvfp4_prose",
+"id": "s011",
+"kind": "diary"
+},
+"T187": {
+"arm": "q8_prose",
+"id": "s077",
+"kind": "letter"
+},
+"T188": {
+"arm": "q8_prose",
+"id": "s027",
+"kind": "diary"
+},
+"T189": {
+"arm": "q8_prose",
+"id": "s066",
+"kind": "description"
+},
+"T190": {
+"arm": "nvfp4_prose",
+"id": "s070",
+"kind": "description"
+},
+"T191": {
+"arm": "q8_prose",
+"id": "s038",
+"kind": "description"
+},
+"T192": {
+"arm": "nvfp4_prose",
+"id": "s034",
+"kind": "description"
+},
+"T193": {
+"arm": "q8_prose",
+"id": "s106",
+"kind": "description"
+},
+"T194": {
+"arm": "nvfp4_prose",
+"id": "s026",
+"kind": "description"
+},
+"T195": {
+"arm": "q8_prose",
+"id": "s085",
+"kind": "letter"
+},
+"T196": {
+"arm": "nvfp4_prose",
+"id": "s016",
+"kind": "story"
+},
+"T197": {
+"arm": "q8_prose",
+"id": "s098",
+"kind": "description"
+},
+"T198": {
+"arm": "nvfp4_prose",
+"id": "s045",
+"kind": "letter"
+},
+"T199": {
+"arm": "nvfp4_prose",
+"id": "s042",
+"kind": "description"
+},
+"T200": {
+"arm": "nvfp4_prose",
+"id": "s024",
+"kind": "story"
+},
+"T201": {
+"arm": "q8_prose",
+"id": "s048",
+"kind": "story"
+},
+"T202": {
+"arm": "nvfp4_prose",
+"id": "s068",
+"kind": "story"
+},
+"T203": {
+"arm": "q8_prose",
+"id": "s001",
+"kind": "letter"
+},
+"T204": {
+"arm": "q8_prose",
+"id": "s087",
+"kind": "diary"
+},
+"T205": {
+"arm": "nvfp4_prose",
+"id": "s114",
+"kind": "description"
+},
+"T206": {
+"arm": "nvfp4_prose",
+"id": "s025",
+"kind": "letter"
+},
+"T207": {
+"arm": "nvfp4_prose",
+"id": "s086",
+"kind": "description"
+},
+"T208": {
+"arm": "q8_prose",
+"id": "s007",
+"kind": "diary"
+},
+"T209": {
+"arm": "q8_prose",
+"id": "s057",
+"kind": "letter"
+},
+"T210": {
+"arm": "q8_prose",
+"id": "s084",
+"kind": "story"
+},
+"T211": {
+"arm": "q8_prose",
+"id": "s015",
+"kind": "diary"
+},
+"T212": {
+"arm": "q8_prose",
+"id": "s021",
+"kind": "letter"
+},
+"T213": {
+"arm": "nvfp4_prose",
+"id": "s057",
+"kind": "letter"
+},
+"T214": {
+"arm": "nvfp4_prose",
+"id": "s050",
+"kind": "description"
+},
+"T215": {
+"arm": "nvfp4_prose",
+"id": "s006",
+"kind": "description"
+},
+"T216": {
+"arm": "q8_prose",
+"id": "s014",
+"kind": "description"
+},
+"T217": {
+"arm": "nvfp4_prose",
+"id": "s030",
+"kind": "description"
+},
+"T218": {
+"arm": "nvfp4_prose",
+"id": "s104",
+"kind": "story"
+},
+"T219": {
+"arm": "q8_prose",
+"id": "s053",
+"kind": "letter"
+},
+"T220": {
+"arm": "nvfp4_prose",
+"id": "s107",
+"kind": "diary"
+},
+"T221": {
+"arm": "nvfp4_prose",
+"id": "s101",
+"kind": "letter"
+},
+"T222": {
+"arm": "nvfp4_prose",
+"id": "s014",
+"kind": "description"
+},
+"T223": {
+"arm": "q8_prose",
+"id": "s008",
+"kind": "story"
+},
+"T224": {
+"arm": "nvfp4_prose",
+"id": "s046",
+"kind": "description"
+},
+"T225": {
+"arm": "nvfp4_prose",
+"id": "s087",
+"kind": "diary"
+},
+"T226": {
+"arm": "q8_prose",
+"id": "s006",
+"kind": "description"
+},
+"T227": {
+"arm": "q8_prose",
+"id": "s052",
+"kind": "story"
+},
+"T228": {
+"arm": "nvfp4_prose",
+"id": "s008",
+"kind": "story"
+},
+"T229": {
+"arm": "q8_prose",
+"id": "s107",
+"kind": "diary"
+},
+"T230": {
+"arm": "q8_prose",
+"id": "s062",
+"kind": "description"
+},
+"T231": {
+"arm": "nvfp4_prose",
+"id": "s083",
+"kind": "diary"
+},
+"T232": {
+"arm": "q8_prose",
+"id": "s094",
+"kind": "description"
+},
+"T233": {
+"arm": "q8_prose",
+"id": "s074",
+"kind": "description"
+},
+"T234": {
+"arm": "q8_prose",
+"id": "s063",
+"kind": "diary"
+},
+"T235": {
+"arm": "q8_prose",
+"id": "s088",
+"kind": "story"
+}
+}
