@@ -1,4 +1,7 @@
 FROM qwen-train:cu128
-# unsloth carries the documented Qwen3.8 QLoRA recipe and the merge helpers;
-# llmcompressor produces the NVFP4 compressed_tensors layout that ninfer imports.
+# unsloth carries the documented Qwen3.8 QLoRA recipe and the merge helpers.
+# Qwen3.8 needs transformers >= 5.2; unsloth pins an older one, so upgrade on both sides.
+RUN pip install --no-cache-dir --upgrade "transformers>=5.2.0"
 RUN pip install --no-cache-dir unsloth unsloth_zoo trl llmcompressor
+RUN pip install --no-cache-dir --upgrade "transformers>=5.2.0"
+RUN python -c "import transformers, torch; print(transformers.__version__, torch.__version__)"

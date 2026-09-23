@@ -1,0 +1,14 @@
+FROM qwen-train:ready
+# Quantisation lives apart from training: llm-compressor and compressed-tensors
+# move fast, and the checkpoint ninfer imports was written by compressed-tensors
+# 0.17.x, while the training image carries 0.14.
+RUN pip install --no-cache-dir --upgrade "git+https://github.com/vllm-project/llm-compressor.git" "compressed-tensors" "auto-round" 2>&1 | tail -3
+RUN pip install --no-cache-dir --upgrade "transformers>=5.2.0" 2>&1 | tail -1
+RUN python -c "import transformers, compressed_tensors, llmcompressor, auto_round; \
+print('transformers', transformers.__version__); print('compressed_tensors', compressed_tensors.__version__); \
+print('llmcompressor', llmcompressor.__version__); print('auto_round', auto_round.__version__); \
+from llmcompressor.modifiers.autoround import AutoRoundModifier; print('AutoRoundModifier ok')"
+# Qwen3.8 is hybrid: 48 of 64 layers are Gated DeltaNet. Without fla, transformers
+# falls back to a pure-torch recurrence that is slow and memory-hungry at 2k tokens.
+RUN pip install --no-cache-dir "flash-linear-attention" 2>&1 | tail -1
+RUN python -c "import fla; print(\"fla\", fla.__version__)"
