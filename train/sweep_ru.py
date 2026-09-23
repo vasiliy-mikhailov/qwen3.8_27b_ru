@@ -42,6 +42,8 @@ def parse_args():
     p.add_argument("--eval-tokens", type=int, default=16384)
     p.add_argument("--probe-every", type=int, default=100,
                    help="training seconds between target-only probes")
+    p.add_argument("--no-offload-embedding", action="store_true",
+                   help="keep embeddings on the GPU; faster if it fits")
     p.add_argument("--targets", nargs="+",
                    default=["russian_code_register", "russian_code_comments"])
     return p.parse_args()
@@ -106,7 +108,7 @@ def main():
     t_load = time.time()
     model, tokenizer = FastModel.from_pretrained(
         model_name=a.base, max_seq_length=a.seq_len, load_in_4bit=True,
-        full_finetuning=False, offload_embedding=True)
+        full_finetuning=False, offload_embedding=not a.no_offload_embedding)
     tok = getattr(tokenizer, "tokenizer", tokenizer)
     print(f"модель загружена за {time.time() - t_load:.0f} с", flush=True)
 
@@ -230,6 +232,8 @@ def main():
             tail = sum(losses[-5:]) / max(len(losses[-5:]), 1)
             row = {
                 "tag": tag, "lr": lr, "accum": accum, "rank": a.rank,
+                "offload_embedding": not a.no_offload_embedding,
+                "tokens_per_second": round(steps * accum * a.seq_len / max(train_seconds, 1), 1),
                 "reset_ok": reset_ok, "steps": steps,
                 "train_seconds": round(train_seconds, 1),
                 "tokens_seen": steps * accum * a.seq_len,

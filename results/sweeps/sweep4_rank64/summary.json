@@ -1,0 +1,78 @@
+{
+ "base_ppl": {
+  "chinese_reference": 7.179475531010112,
+  "english_long_form": 7.046014912388971,
+  "english_reference": 6.074856633767633,
+  "ninfer_code": 1.9282568190811222,
+  "russian_code_comments": 5.268894146125914,
+  "russian_code_register": 3.3176873161251152,
+  "russian_reference": 4.398883722633974
+ },
+ "eval_seconds": 81.42874526977539,
+ "runs": [
+  {
+   "tag": "lr0.0001_acc4",
+   "lr": 0.0001,
+   "accum": 4,
+   "rank": 64,
+   "offload_embedding": true,
+   "tokens_per_second": 744.0,
+   "reset_ok": true,
+   "steps": 31,
+   "train_seconds": 341.3,
+   "tokens_seen": 253952,
+   "train_loss_first5": 1.3968770265579225,
+   "train_loss_last5": 1.2623295068740845,
+   "eval_ppl": {
+    "chinese_reference": 7.092419800979037,
+    "english_long_form": 6.9696511677483235,
+    "english_reference": 5.812510497756115,
+    "ninfer_code": 1.9269848627338935,
+    "russian_code_comments": 5.12176738912501,
+    "russian_code_register": 3.1841660066035873,
+    "russian_reference": 4.3429154009523385
+   },
+   "eval_delta_nll": {
+    "chinese_reference": -0.012199754516283745,
+    "english_long_form": -0.010897020498911614,
+    "english_reference": -0.04414581259091688,
+    "ninfer_code": -0.0006598581870396192,
+    "russian_code_comments": -0.028320928414662605,
+    "russian_code_register": -0.041077544291814316,
+    "russian_reference": -0.01280493537584948
+   }
+  },
+  {
+   "tag": "lr0.0002_acc4",
+   "lr": 0.0002,
+   "accum": 4,
+   "rank": 64,
+   "offload_embedding": true,
+   "tokens_per_second": 828.8,
+   "reset_ok": true,
+   "steps": 34,
+   "train_seconds": 336.1,
+   "tokens_seen": 278528,
+   "train_loss_first5": 1.3882596492767334,
+   "train_loss_last5": 1.2048259735107423,
+   "eval_ppl": {
+    "chinese_reference": 7.09040804978316,
+    "english_long_form": 6.980510066736452,
+    "english_reference": 5.802405415867721,
+    "ninfer_code": 1.9300435912664022,
+    "russian_code_comments": 5.076510586294913,
+    "russian_code_register": 3.1792619318947346,
+    "russian_reference": 4.337447581545966
+   },
+   "eval_delta_nll": {
+    "chinese_reference": -0.012483442823092217,
+    "english_long_form": -0.009340206782023186,
+    "english_reference": -0.045885831117630005,
+    "ninfer_code": 0.0009261965751647949,
+    "russian_code_comments": -0.03719636797904968,
+    "russian_code_register": -0.042618875702222336,
+    "russian_reference": -0.01406474908192945
+   }
+  }
+ ]
+}
