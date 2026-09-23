@@ -1,0 +1,125 @@
+{
+  "schema": "ninfer.artifact-manifest",
+  "schema_version": 2,
+  "artifact": {
+    "filename": "qwen3_8_27b_nvfp4.ninfer",
+    "bytes": 23719715844,
+    "sha256": "bde2d964b7d2d59f809af42dfa5f0e2349adc522cafaf84e4ab67cbb11982b3b",
+    "container_version": 3,
+    "architecture": "Qwen3_5ForCausalLM",
+    "name": "qwen3.8-27b-ar-r1",
+    "components": [
+      "text",
+      "vision",
+      "mtp",
+      "dflash2"
+    ]
+  },
+  "source": {
+    "base": {
+      "repo_id": "Qwen/Qwen3.8-27B",
+      "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+      "license": "Apache-2.0",
+      "download_source": "https://huggingface.co/Qwen/Qwen3.8-27B"
+    },
+    "quantized": {
+      "description": "unsloth/Qwen3.8-27B-NVFP4 with the NVFP4 MLP tensors of text layers 0-55 replaced by AutoRound output (weights) and max(original, Russian-calibrated) activation maxima",
+      "derived_from": {
+        "repo_id": "unsloth/Qwen3.8-27B-NVFP4",
+        "revision": "f0b7c9e722f5565102fff8481c99e4d86ae099c7",
+        "license": "Apache-2.0"
+      },
+      "requantization": {
+        "method": "AutoRound (auto-round 0.15.1) via llm-compressor AutoRoundModifier, scheme NVFP4",
+        "targets": "model.language_model.layers.{0..55}.mlp.{gate,up,down}_proj",
+        "tuning_context": "every Linear of each decoder block simulated as W4A4 NVFP4 during tuning; only MLP tensors kept",
+        "iterations": 100,
+        "batch_size": 2,
+        "gradient_accumulation": 4,
+        "calibration": {
+          "sequences": 256,
+          "tokens_per_sequence": 2048,
+          "mix": {
+            "ru_stackoverflow_chat": 96,
+            "code_with_russian_comments": 56,
+            "agent_tool_calls": 48,
+            "russian_comment_blocks": 24,
+            "code_without_cyrillic": 32
+          }
+        },
+        "activation_scales": "per matrix, the smaller input_global_scale (larger amax) of original and calibrated; 104 of 168 changed",
+        "scripts": "https://github.com/vasiliy-mikhailov/qwen3.8_27b_ru/tree/main/quant"
+      },
+      "license": "Apache-2.0"
+    },
+    "dflash2": {
+      "repo_id": "z-lab/Qwen3.8-27B-DFlash2",
+      "revision": "50307d4c4cde6860d4eee73e2547cd786fe8e8a4",
+      "license": "Apache-2.0"
+    }
+  },
+  "conversion": {
+    "recipe_id": "qwen3_8_27b_nvfp4",
+    "embedding_encoder": "fp8_row_maxabs",
+    "converter_repository": "https://github.com/Neroued/ninfer",
+    "ranking_input": {
+      "path": "tools/freq_corpus/fixtures/ranking/ranking.train.counts.i64",
+      "sha256": "c692dc76388132c910547589b4fb4a0503fbd6ad50aaac6a509bbcb192a8afa5"
+    }
+  },
+  "runtime": {
+    "repository": "https://github.com/Neroued/ninfer",
+    "minimum_revision": "98dada0e03cb073fd07f905400b5904bc6e82759",
+    "cuda_architecture": "sm_120a",
+    "dflash2_draft_tokens": {
+      "recommended": 7,
+      "minimum": 1,
+      "maximum": 15
+    },
+    "tested_revision": "9e163eee4b8acec21ab0ac765107b6a3f287b217"
+  },
+  "inventory": {
+    "objects": 1246,
+    "tensors": 1240,
+    "resources": 6,
+    "bindings": 1513,
+    "uses": 844,
+    "formats": {
+      "bf16": 579,
+      "fp32": 264,
+      "fp8_e4m3fn_row_bf16": 146,
+      "int32": 1,
+      "nvfp4": 112,
+      "q4_g64_fp16": 55,
+      "q5_g64_fp16": 54,
+      "q6_g64_fp16": 1,
+      "q8_g32_fp16": 28
+    },
+    "layouts": {
+      "block_scale_k16_m128x4_v1": 112,
+      "contiguous_le_v1": 844,
+      "row_scale_v1": 146,
+      "row_split_k128_v1": 138
+    },
+    "encodings": {
+      "raw_bytes_v1": 6
+    },
+    "bytes": {
+      "tensor": 23706400256,
+      "resource": 12837937,
+      "object": 23719238193,
+      "payload_span": 23719322628,
+      "alignment": 84435
+    }
+  },
+  "difference_from": {
+    "repo_id": "neroued/Qwen3.8-27B-nvfp4-NInfer",
+    "sha256": "74d2c57145e6ff11d1d2faa79594477f9bc903a611af1fb20218189fbbb77d82",
+    "objects_identical": 1030,
+    "objects_differing": 216,
+    "differing": {
+      "nvfp4_weights": 112,
+      "activation_divisors": 104
+    }
+  }
+}

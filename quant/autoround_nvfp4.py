@@ -3,8 +3,8 @@
 
 The production checkpoint (unsloth/Qwen3.8-27B-NVFP4) keeps attention, the
 linear-attention projections, lm_head and the MLP of layers 56-63 in FP8, and
-puts the MLP of layers 0-55 in NVFP4 with round-to-nearest weights and static
-activation scales from its own calibration. Only those 168 NVFP4 matrices lose
+puts the MLP of layers 0-55 in NVFP4 (GPTQ-style, per its actorder: static) with
+static activation scales from its own calibration. Only those 168 NVFP4 matrices lose
 real precision, so only they are redone here:
 
 - weights: AutoRound learns the rounding and clipping of every block so that
