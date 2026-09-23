@@ -41,6 +41,10 @@ ap.add_argument("--batch", type=int, default=2)
 ap.add_argument("--grad-acc", type=int, default=4, help="effective batch = batch * grad-acc (AutoRound's default is 8)")
 ap.add_argument("--lr", type=float, default=None)
 ap.add_argument("--truncate", type=int, default=None, help="keep only the first N layers (pilot)")
+ap.add_argument("--context", choices=("bf16", "nvfp4", "mxfp4"), default="bf16",
+                help="how the non-target Linears of a block are simulated while the MLP is tuned: "
+                     "bf16 (close to production's FP8; run r2), nvfp4 (AutoRound's default; run r1), "
+                     "mxfp4 (coarser still; run r3)")
 a = ap.parse_args()
 
 lo, hi = map(int, a.layers.split("-"))
@@ -112,14 +116,21 @@ def _auto_round_with_accumulation(*args, **kwargs):
 
 _ar_base.AutoRound = _auto_round_with_accumulation
 
-# llm-compressor tells AutoRound to skip only target-matching layers that ended
-# up without a scheme; every other Linear in the block falls under AutoRound's
-# default scheme. With scheme="NVFP4" that made it tune attention and the
-# linear-attention projections as W4A4 too (8/8 and 7/7 layers per block in run
-# r1), although production keeps them in FP8, so the MLP rounding was fitted
-# against a context far noisier than the one it runs in. Here every Linear
-# without a quantization scheme is ignored and stays bf16, which is close to FP8.
-# AutoRound matches these names as substrings of the wrapped block's names.
+# The context the MLP rounding is tuned in. llm-compressor tells AutoRound to
+# skip only target-matching layers that ended up without a scheme; every other
+# Linear in the block falls under AutoRound's default scheme. With
+# scheme="NVFP4" that makes attention and the linear-attention projections W4A4
+# during tuning (8/8 and 7/7 layers per block), although production keeps them
+# in FP8 -- that was run r1, and its MLP turned out to make fewer errors, not
+# more. --context picks the context deliberately:
+#   bf16  - every Linear without a scheme is ignored and stays bf16, close to
+#           production's FP8 (run r2);
+#   nvfp4 - AutoRound's default, everything W4A4 (run r1);
+#   mxfp4 - the non-target Linears are simulated as MXFP4 (groups of 32,
+#           power-of-two scales) at round-to-nearest, noisier than r1's
+#           tuned NVFP4 context (run r3).
+# Only the NVFP4 MLP tensors are kept by merge_nvfp4.py in every case. AutoRound
+# matches ignore names as substrings of the wrapped block's names.
 
 
 def _unquantized_linears(self, block):
@@ -127,7 +138,58 @@ def _unquantized_linears(self, block):
             if isinstance(m, torch.nn.Linear) and getattr(m, "quantization_scheme", None) is None]
 
 
-AutoRoundModifier.get_unquantized_layer_names = _unquantized_linears
+if a.context == "bf16":
+    AutoRoundModifier.get_unquantized_layer_names = _unquantized_linears
+elif a.context == "mxfp4":
+    from dataclasses import asdict
+    from auto_round.schemes import PRESET_SCHEMES as _AR_PRESETS
+    from auto_round.data_type.register import QUANT_FUNC_WITH_DTYPE as _AR_DTYPES
+
+    # The context layers are noise, not something to tune: their MXFP4
+    # quantiser runs without autograd and passes gradients straight through to
+    # its input, so they stay at round-to-nearest (coarser than r1, whose context
+    # layers AutoRound also tuned) and cost no memory for the backward pass.
+    def _frozen(fn):
+        def run(tensor, *args, **kwargs):
+            with torch.no_grad():
+                out = fn(tensor, *args, **kwargs)
+            q = out[0]
+            q = tensor + (q - tensor).detach() if tensor.requires_grad else q
+            return (q, *out[1:])
+        return run
+
+    for _name in [n for n in _AR_DTYPES if n.startswith("mx_fp")]:
+        _AR_DTYPES[_name] = _frozen(_AR_DTYPES[_name])
+
+    _build_layer_config = AutoRoundModifier._build_layer_config_for_autoround
+
+    def _layer_config_with_coarse_context(self, wrapped_model):
+        config = _build_layer_config(self, wrapped_model) or {}
+        default = self._quant_scheme_to_autoround_config(self._get_default_quant_scheme())
+        coarse = {k: v for k, v in asdict(_AR_PRESETS["MXFP4"]).items() if k in default}
+        # llm-compressor's own target matcher compares the full-path regex with
+        # names relative to the block and finds nothing, so targets are
+        # recognised by the quantization scheme llm-compressor attached to them.
+        linears = [(n, m) for n, m in wrapped_model.named_modules() if isinstance(m, torch.nn.Linear)]
+        has_target = any(getattr(m, "quantization_scheme", None) is not None for _, m in linears)
+        coarse_names = [n for n, m in linears
+                        if getattr(m, "quantization_scheme", None) is None] if has_target else []
+        for name in coarse_names:
+            config[name] = dict(coarse)
+        print(f"[ctx] {len(coarse_names)} non-target Linears simulated as MXFP4", flush=True)
+        return config
+
+    AutoRoundModifier._build_layer_config_for_autoround = _layer_config_with_coarse_context
+
+    # A block with no NVFP4 target (56-63) has nothing left to tune once its
+    # context is frozen, so it is skipped whole, as in the bf16 context.
+    def _skip_blocks_without_targets(self, block):
+        if any(isinstance(m, torch.nn.Linear) and getattr(m, "quantization_scheme", None) is not None
+               for m in block.modules()):
+            return []
+        return _unquantized_linears(self, block)
+
+    AutoRoundModifier.get_unquantized_layer_names = _skip_blocks_without_targets
 
 rows = [json.loads(l) for l in open(a.calib, encoding="utf-8")][: a.nsamples]
 seqlen = len(rows[0]["input_ids"])
@@ -166,6 +228,6 @@ os.makedirs(a.out, exist_ok=True)
 model.save_pretrained(a.out, save_compressed=True)
 with open(os.path.join(a.out, "autoround_run.json"), "w") as f:
     json.dump({"layers": [layers[0], layers[-1]], "nsamples": len(rows), "seqlen": seqlen,
-               "iters": a.iters, "batch": a.batch, "grad_acc": a.grad_acc, "lr": a.lr, "truncate": a.truncate,
+               "iters": a.iters, "batch": a.batch, "grad_acc": a.grad_acc, "context": a.context, "lr": a.lr, "truncate": a.truncate,
                "calib": os.path.abspath(a.calib), "seconds": round(took)}, f, indent=1)
 print(f"done in {took/60:.1f} min -> {a.out}")

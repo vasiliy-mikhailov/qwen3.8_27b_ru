@@ -1,0 +1,15 @@
+{
+ "layers": [
+  0,
+  55
+ ],
+ "nsamples": 256,
+ "seqlen": 2048,
+ "iters": 100,
+ "batch": 2,
+ "grad_acc": 4,
+ "lr": null,
+ "truncate": null,
+ "calib": "/w/data/calib/calib_ru.jsonl",
+ "seconds": 5984
+}

@@ -1,0 +1,3 @@
+replaced 672 tensors in 168 matrices
+FP4 codes changed: median 22.4%, min 19.3%, max 36.9%
+activation scale new/prod: median 0.994, min 0.289, max 2.171; kept: safe, 31 of 168 matrices would clip harder than production
