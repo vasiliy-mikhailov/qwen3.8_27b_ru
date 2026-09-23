@@ -1,0 +1,20 @@
+[
+ {
+  "checkpoint_seconds": 300,
+  "trained_seconds": 301.4,
+  "steps": 56,
+  "tokens_seen": 229376
+ },
+ {
+  "checkpoint_seconds": 1200,
+  "trained_seconds": 1200.3,
+  "steps": 264,
+  "tokens_seen": 1081344
+ },
+ {
+  "checkpoint_seconds": 3600,
+  "trained_seconds": 3603.6,
+  "steps": 820,
+  "tokens_seen": 3358720
+ }
+]
