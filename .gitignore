@@ -7,3 +7,5 @@ data/corpora/
 *.parquet
 __pycache__/
 .venv/
+# Samples of third-party corpora used for the source-quality check.
+results/corpus_quality/corpus_samples.jsonl

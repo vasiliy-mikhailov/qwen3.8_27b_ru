@@ -1,0 +1,602 @@
+{
+"T000": {
+"arm": "src_wikipedia",
+"id": "wk32",
+"kind": "wikipedia"
+},
+"T001": {
+"arm": "src_stackoverflow",
+"id": "so11",
+"kind": "stackoverflow"
+},
+"T002": {
+"arm": "src_wikipedia",
+"id": "wk35",
+"kind": "wikipedia"
+},
+"T003": {
+"arm": "src_github",
+"id": "gh05",
+"kind": "github_comments"
+},
+"T004": {
+"arm": "src_github",
+"id": "gh10",
+"kind": "github_comments"
+},
+"T005": {
+"arm": "src_wikipedia",
+"id": "wk08",
+"kind": "wikipedia"
+},
+"T006": {
+"arm": "src_wikipedia",
+"id": "wk23",
+"kind": "wikipedia"
+},
+"T007": {
+"arm": "src_wikipedia",
+"id": "wk34",
+"kind": "wikipedia"
+},
+"T008": {
+"arm": "src_stackoverflow",
+"id": "so21",
+"kind": "stackoverflow"
+},
+"T009": {
+"arm": "src_wikipedia",
+"id": "wk19",
+"kind": "wikipedia"
+},
+"T010": {
+"arm": "src_github",
+"id": "gh38",
+"kind": "github_comments"
+},
+"T011": {
+"arm": "src_stackoverflow",
+"id": "so06",
+"kind": "stackoverflow"
+},
+"T012": {
+"arm": "src_github",
+"id": "gh11",
+"kind": "github_comments"
+},
+"T013": {
+"arm": "src_stackoverflow",
+"id": "so14",
+"kind": "stackoverflow"
+},
+"T014": {
+"arm": "src_wikipedia",
+"id": "wk18",
+"kind": "wikipedia"
+},
+"T015": {
+"arm": "src_stackoverflow",
+"id": "so23",
+"kind": "stackoverflow"
+},
+"T016": {
+"arm": "src_wikipedia",
+"id": "wk25",
+"kind": "wikipedia"
+},
+"T017": {
+"arm": "src_stackoverflow",
+"id": "so08",
+"kind": "stackoverflow"
+},
+"T018": {
+"arm": "src_wikipedia",
+"id": "wk24",
+"kind": "wikipedia"
+},
+"T019": {
+"arm": "src_stackoverflow",
+"id": "so35",
+"kind": "stackoverflow"
+},
+"T020": {
+"arm": "src_github",
+"id": "gh28",
+"kind": "github_comments"
+},
+"T021": {
+"arm": "src_stackoverflow",
+"id": "so02",
+"kind": "stackoverflow"
+},
+"T022": {
+"arm": "src_stackoverflow",
+"id": "so32",
+"kind": "stackoverflow"
+},
+"T023": {
+"arm": "src_wikipedia",
+"id": "wk28",
+"kind": "wikipedia"
+},
+"T024": {
+"arm": "src_wikipedia",
+"id": "wk06",
+"kind": "wikipedia"
+},
+"T025": {
+"arm": "src_stackoverflow",
+"id": "so17",
+"kind": "stackoverflow"
+},
+"T026": {
+"arm": "src_github",
+"id": "gh15",
+"kind": "github_comments"
+},
+"T027": {
+"arm": "src_github",
+"id": "gh19",
+"kind": "github_comments"
+},
+"T028": {
+"arm": "src_github",
+"id": "gh35",
+"kind": "github_comments"
+},
+"T029": {
+"arm": "src_stackoverflow",
+"id": "so29",
+"kind": "stackoverflow"
+},
+"T030": {
+"arm": "src_github",
+"id": "gh06",
+"kind": "github_comments"
+},
+"T031": {
+"arm": "src_stackoverflow",
+"id": "so27",
+"kind": "stackoverflow"
+},
+"T032": {
+"arm": "src_wikipedia",
+"id": "wk39",
+"kind": "wikipedia"
+},
+"T033": {
+"arm": "src_wikipedia",
+"id": "wk13",
+"kind": "wikipedia"
+},
+"T034": {
+"arm": "src_stackoverflow",
+"id": "so30",
+"kind": "stackoverflow"
+},
+"T035": {
+"arm": "src_wikipedia",
+"id": "wk09",
+"kind": "wikipedia"
+},
+"T036": {
+"arm": "src_github",
+"id": "gh39",
+"kind": "github_comments"
+},
+"T037": {
+"arm": "src_github",
+"id": "gh14",
+"kind": "github_comments"
+},
+"T038": {
+"arm": "src_github",
+"id": "gh00",
+"kind": "github_comments"
+},
+"T039": {
+"arm": "src_github",
+"id": "gh37",
+"kind": "github_comments"
+},
+"T040": {
+"arm": "src_github",
+"id": "gh29",
+"kind": "github_comments"
+},
+"T041": {
+"arm": "src_stackoverflow",
+"id": "so36",
+"kind": "stackoverflow"
+},
+"T042": {
+"arm": "src_stackoverflow",
+"id": "so01",
+"kind": "stackoverflow"
+},
+"T043": {
+"arm": "src_stackoverflow",
+"id": "so20",
+"kind": "stackoverflow"
+},
+"T044": {
+"arm": "src_github",
+"id": "gh18",
+"kind": "github_comments"
+},
+"T045": {
+"arm": "src_wikipedia",
+"id": "wk14",
+"kind": "wikipedia"
+},
+"T046": {
+"arm": "src_wikipedia",
+"id": "wk11",
+"kind": "wikipedia"
+},
+"T047": {
+"arm": "src_github",
+"id": "gh30",
+"kind": "github_comments"
+},
+"T048": {
+"arm": "src_wikipedia",
+"id": "wk27",
+"kind": "wikipedia"
+},
+"T049": {
+"arm": "src_github",
+"id": "gh08",
+"kind": "github_comments"
+},
+"T050": {
+"arm": "src_github",
+"id": "gh16",
+"kind": "github_comments"
+},
+"T051": {
+"arm": "src_stackoverflow",
+"id": "so05",
+"kind": "stackoverflow"
+},
+"T052": {
+"arm": "src_wikipedia",
+"id": "wk17",
+"kind": "wikipedia"
+},
+"T053": {
+"arm": "src_stackoverflow",
+"id": "so25",
+"kind": "stackoverflow"
+},
+"T054": {
+"arm": "src_github",
+"id": "gh01",
+"kind": "github_comments"
+},
+"T055": {
+"arm": "src_github",
+"id": "gh20",
+"kind": "github_comments"
+},
+"T056": {
+"arm": "src_github",
+"id": "gh21",
+"kind": "github_comments"
+},
+"T057": {
+"arm": "src_wikipedia",
+"id": "wk05",
+"kind": "wikipedia"
+},
+"T058": {
+"arm": "src_stackoverflow",
+"id": "so16",
+"kind": "stackoverflow"
+},
+"T059": {
+"arm": "src_wikipedia",
+"id": "wk37",
+"kind": "wikipedia"
+},
+"T060": {
+"arm": "src_stackoverflow",
+"id": "so39",
+"kind": "stackoverflow"
+},
+"T061": {
+"arm": "src_stackoverflow",
+"id": "so15",
+"kind": "stackoverflow"
+},
+"T062": {
+"arm": "src_stackoverflow",
+"id": "so12",
+"kind": "stackoverflow"
+},
+"T063": {
+"arm": "src_github",
+"id": "gh12",
+"kind": "github_comments"
+},
+"T064": {
+"arm": "src_stackoverflow",
+"id": "so09",
+"kind": "stackoverflow"
+},
+"T065": {
+"arm": "src_wikipedia",
+"id": "wk03",
+"kind": "wikipedia"
+},
+"T066": {
+"arm": "src_github",
+"id": "gh33",
+"kind": "github_comments"
+},
+"T067": {
+"arm": "src_github",
+"id": "gh17",
+"kind": "github_comments"
+},
+"T068": {
+"arm": "src_stackoverflow",
+"id": "so22",
+"kind": "stackoverflow"
+},
+"T069": {
+"arm": "src_stackoverflow",
+"id": "so18",
+"kind": "stackoverflow"
+},
+"T070": {
+"arm": "src_stackoverflow",
+"id": "so34",
+"kind": "stackoverflow"
+},
+"T071": {
+"arm": "src_wikipedia",
+"id": "wk16",
+"kind": "wikipedia"
+},
+"T072": {
+"arm": "src_wikipedia",
+"id": "wk10",
+"kind": "wikipedia"
+},
+"T073": {
+"arm": "src_github",
+"id": "gh25",
+"kind": "github_comments"
+},
+"T074": {
+"arm": "src_github",
+"id": "gh24",
+"kind": "github_comments"
+},
+"T075": {
+"arm": "src_stackoverflow",
+"id": "so38",
+"kind": "stackoverflow"
+},
+"T076": {
+"arm": "src_stackoverflow",
+"id": "so13",
+"kind": "stackoverflow"
+},
+"T077": {
+"arm": "src_stackoverflow",
+"id": "so33",
+"kind": "stackoverflow"
+},
+"T078": {
+"arm": "src_stackoverflow",
+"id": "so19",
+"kind": "stackoverflow"
+},
+"T079": {
+"arm": "src_github",
+"id": "gh36",
+"kind": "github_comments"
+},
+"T080": {
+"arm": "src_wikipedia",
+"id": "wk33",
+"kind": "wikipedia"
+},
+"T081": {
+"arm": "src_github",
+"id": "gh32",
+"kind": "github_comments"
+},
+"T082": {
+"arm": "src_wikipedia",
+"id": "wk15",
+"kind": "wikipedia"
+},
+"T083": {
+"arm": "src_github",
+"id": "gh27",
+"kind": "github_comments"
+},
+"T084": {
+"arm": "src_github",
+"id": "gh09",
+"kind": "github_comments"
+},
+"T085": {
+"arm": "src_wikipedia",
+"id": "wk01",
+"kind": "wikipedia"
+},
+"T086": {
+"arm": "src_wikipedia",
+"id": "wk00",
+"kind": "wikipedia"
+},
+"T087": {
+"arm": "src_wikipedia",
+"id": "wk12",
+"kind": "wikipedia"
+},
+"T088": {
+"arm": "src_stackoverflow",
+"id": "so24",
+"kind": "stackoverflow"
+},
+"T089": {
+"arm": "src_stackoverflow",
+"id": "so00",
+"kind": "stackoverflow"
+},
+"T090": {
+"arm": "src_github",
+"id": "gh03",
+"kind": "github_comments"
+},
+"T091": {
+"arm": "src_wikipedia",
+"id": "wk36",
+"kind": "wikipedia"
+},
+"T092": {
+"arm": "src_github",
+"id": "gh31",
+"kind": "github_comments"
+},
+"T093": {
+"arm": "src_wikipedia",
+"id": "wk30",
+"kind": "wikipedia"
+},
+"T094": {
+"arm": "src_stackoverflow",
+"id": "so28",
+"kind": "stackoverflow"
+},
+"T095": {
+"arm": "src_github",
+"id": "gh02",
+"kind": "github_comments"
+},
+"T096": {
+"arm": "src_wikipedia",
+"id": "wk21",
+"kind": "wikipedia"
+},
+"T097": {
+"arm": "src_stackoverflow",
+"id": "so10",
+"kind": "stackoverflow"
+},
+"T098": {
+"arm": "src_wikipedia",
+"id": "wk07",
+"kind": "wikipedia"
+},
+"T099": {
+"arm": "src_wikipedia",
+"id": "wk04",
+"kind": "wikipedia"
+},
+"T100": {
+"arm": "src_github",
+"id": "gh22",
+"kind": "github_comments"
+},
+"T101": {
+"arm": "src_stackoverflow",
+"id": "so07",
+"kind": "stackoverflow"
+},
+"T102": {
+"arm": "src_github",
+"id": "gh34",
+"kind": "github_comments"
+},
+"T103": {
+"arm": "src_wikipedia",
+"id": "wk26",
+"kind": "wikipedia"
+},
+"T104": {
+"arm": "src_wikipedia",
+"id": "wk31",
+"kind": "wikipedia"
+},
+"T105": {
+"arm": "src_wikipedia",
+"id": "wk29",
+"kind": "wikipedia"
+},
+"T106": {
+"arm": "src_github",
+"id": "gh26",
+"kind": "github_comments"
+},
+"T107": {
+"arm": "src_stackoverflow",
+"id": "so04",
+"kind": "stackoverflow"
+},
+"T108": {
+"arm": "src_wikipedia",
+"id": "wk02",
+"kind": "wikipedia"
+},
+"T109": {
+"arm": "src_wikipedia",
+"id": "wk22",
+"kind": "wikipedia"
+},
+"T110": {
+"arm": "src_stackoverflow",
+"id": "so03",
+"kind": "stackoverflow"
+},
+"T111": {
+"arm": "src_stackoverflow",
+"id": "so26",
+"kind": "stackoverflow"
+},
+"T112": {
+"arm": "src_github",
+"id": "gh23",
+"kind": "github_comments"
+},
+"T113": {
+"arm": "src_github",
+"id": "gh13",
+"kind": "github_comments"
+},
+"T114": {
+"arm": "src_wikipedia",
+"id": "wk38",
+"kind": "wikipedia"
+},
+"T115": {
+"arm": "src_wikipedia",
+"id": "wk20",
+"kind": "wikipedia"
+},
+"T116": {
+"arm": "src_github",
+"id": "gh07",
+"kind": "github_comments"
+},
+"T117": {
+"arm": "src_stackoverflow",
+"id": "so37",
+"kind": "stackoverflow"
+},
+"T118": {
+"arm": "src_stackoverflow",
+"id": "so31",
+"kind": "stackoverflow"
+},
+"T119": {
+"arm": "src_github",
+"id": "gh04",
+"kind": "github_comments"
+}
+}
