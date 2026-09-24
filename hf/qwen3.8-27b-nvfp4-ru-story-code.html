@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 1080px; height: 1920px; overflow: hidden;
+    background: #0e1013; color: #f3f2ee;
+    font-family: -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { box-sizing: border-box; width: 1080px; padding: 262px 80px 0; display: flex; flex-direction: column; }
+  .kicker { font-size: 29px; letter-spacing: 1px; color: #9aa3ad; margin-bottom: 22px; }
+  .kicker b { color: #f3f2ee; font-weight: 600; }
+  .h { font-size: 78px; line-height: 1.05; font-weight: 700; letter-spacing: -1.5px; margin: 0; }
+  .cards { margin: 34px 0 44px; display: flex; flex-direction: column; gap: 18px; }
+  .card { background: #161a20; border: 2px solid #232933; border-radius: 18px; padding: 18px 26px 20px; }
+  .lang { font-family: -apple-system, sans-serif; font-size: 21px; color: #7d8590; margin-bottom: 8px; letter-spacing: .5px; }
+  pre { margin: 0; font-family: "SF Mono", Menlo, monospace; font-size: 25px; line-height: 1.5; color: #d8dee6; white-space: pre; }
+  .c { color: #8b949e; }
+  .k { color: #ff7b72; }
+  .f { color: #d2a8ff; }
+  .s { color: #a5d6ff; }
+  .e { color: #f3f2ee; text-decoration: underline wavy #ff5a5a; text-decoration-thickness: 3px; text-underline-offset: 8px; }
+  .punch { margin-top: 64px; font-size: 84px; line-height: 1.05; font-weight: 800; letter-spacing: -2px; color: #5aa2ff; }
+  .fine { margin-top: 26px; font-size: 30px; line-height: 1.4; color: #c9ccd1; }
+  .fine b { color: #f3f2ee; font-weight: 600; }
+  .link { margin-top: 50px; padding: 20px 28px; border-radius: 18px; background: #171b21; border: 2px solid #2a3140; }
+  .link .t { font-size: 23px; color: #9aa3ad; margin-bottom: 6px; }
+  .link .u { font-size: 31px; font-weight: 600; color: #f3f2ee; }
+  .foot { margin-top: 22px; font-size: 22px; line-height: 1.35; color: #7d8590; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker"><b>ninfer</b> · RTX 5090 · Qwen3.8-27B NVFP4</div>
+
+  <p class="h">Устал получать</p>
+
+  <div class="cards">
+    <div class="card"><div class="lang">python</div><pre><span class="k">def</span> <span class="f">merge</span>(a, b):
+    <span class="s">"""<span class="e">Слиять</span> два отсортированных
+    по возрастанию списка в один.</span></pre></div>
+    <div class="card"><div class="lang">go</div><pre>ch := <span class="f">make</span>(<span class="k">chan</span> int)
+<span class="c">// 2. Запускаем первую <span class="e">горуутину</span> (отправитель).</span></pre></div>
+    <div class="card"><div class="lang">elixir</div><pre><span class="c"># Получаем текущее время в миллисекундах
+# с использованием <span class="e">монохронного</span> таймера</span>
+now = System.<span class="f">monotonic_time</span>(<span class="s">:millisecond</span>)</pre></div>
+  </div>
+
+  <p class="h">со скоростью<br>300 токенов/с?</p>
+
+  <div class="punch">Скорость оставили.</div>
+
+  <div class="fine">Ошибок — <b>на треть меньше</b>: 0,70 против 1,03 на страницу.<br>Тот же NVFP4, тот же размер, те же ядра.</div>
+
+  <div class="link">
+    <div class="t">Hugging Face</div>
+    <div class="u">vasiliy-mikhailov/Qwen3.8-27B-nvfp4-ru-NInfer</div>
+  </div>
+
+  <div class="foot">Код и комментарии — настоящие ответы исходного NVFP4 (переносы строк наши).<br>Ошибки считали LLM-агенты вслепую: 160 заданий, p = 0,004.</div>
+</div>
+</body>
+</html>
