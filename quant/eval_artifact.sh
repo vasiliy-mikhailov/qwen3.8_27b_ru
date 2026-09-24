@@ -16,6 +16,7 @@ log() { echo "$(date +%H:%M:%S) $*"; }
 
 docker stop inference-ninfer >/dev/null
 trap 'docker rm -f ar-serve >/dev/null 2>&1; docker start inference-ninfer >/dev/null; log "prod restarted"' EXIT
+trap 'exit 1' INT TERM HUP
 
 log "perplexity $ART"
 docker run --rm --gpus all $U -v $ART:/models:ro -v $W/data/corpora/baseline-corpus:/corpus:ro -v $R/ppl:/out \

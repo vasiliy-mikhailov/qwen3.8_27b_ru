@@ -6,6 +6,9 @@
 # Production is stopped for the GPU and restarted whatever happens.
 #
 # Usage: run_full.sh TAG [autoround_nvfp4.py options...]
+# MERGE_BASE (default: the unsloth store) and MERGE_TAKE (nvfp4|fp8|both, default
+# nvfp4) choose what the new tensors are merged into; f1 merges its FP8 rows into
+# r1's store and keeps r1's MLP.
 set -u
 TAG=$1; shift
 W=/home/vmihaylov/qwen3.8_27b_ru
@@ -19,20 +22,24 @@ log() { echo "$(date +%H:%M:%S) $*"; }
 
 docker stop inference-ninfer >/dev/null
 trap 'docker rm -f ar-serve >/dev/null 2>&1; docker start inference-ninfer >/dev/null; log "prod restarted"' EXIT
+trap 'exit 1' INT TERM HUP
 
 log "autoround $*"
 docker run --rm --gpus all --shm-size 16g $U -e PYTORCH_ALLOC_CONF=expandable_segments:True \
   -v $W:/w -v $M:/models qwen-quant:latest \
   python /w/quant/autoround_nvfp4.py --model /models/Qwen3.8-27B-bf16 \
     --calib /w/data/calib/calib_ru.jsonl --out /models/ar-$TAG "$@" 2>&1 \
-  | tr '\r' '\n' | grep -E --line-buffered '\[mem\] block|Applying AutoRound|done in|Error|Traceback|error:' > $R/autoround.log
+  | tr '\r' '\n' | sed 's/\x1b\[[0-9;]*m//g' \
+  | grep -E --line-buffered '\[mem\] block|\[fp8\]|quantized [0-9]+/[0-9]+ layers|Applying AutoRound|done in|Error|Traceback|error:' > $R/autoround.log
 grep -q "done in" $R/autoround.log || { log "autoround failed"; tail -5 $R/autoround.log; exit 1; }
 log "$(tail -1 $R/autoround.log)"
 
 log "merge"
 docker run --rm $U -v $W:/w -v $M:/models qwen-quant:latest \
-  python /w/quant/merge_nvfp4.py --base /models/unsloth-Qwen3.8-27B-NVFP4 --ar /models/ar-$TAG --out /models/ar-$TAG-merged 2>&1 \
+  python /w/quant/merge_nvfp4.py --base ${MERGE_BASE:-/models/unsloth-Qwen3.8-27B-NVFP4} --ar /models/ar-$TAG \
+    --out /models/ar-$TAG-merged --take ${MERGE_TAKE:-nvfp4} 2>&1 \
   | grep -Ev "$QUIET" | tee $R/merge.log
+[ -s $MERGED/model.safetensors ] || { log "merge failed"; exit 1; }
 cp $MERGED/merge_report.json $AR/autoround_run.json $R/
 
 log "convert"

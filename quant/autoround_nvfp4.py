@@ -45,13 +45,24 @@ ap.add_argument("--context", choices=("bf16", "nvfp4", "mxfp4"), default="bf16",
                 help="how the non-target Linears of a block are simulated while the MLP is tuned: "
                      "bf16 (close to production's FP8; run r2), nvfp4 (AutoRound's default; run r1), "
                      "mxfp4 (coarser still; run r3)")
+ap.add_argument("--fp8", action="store_true",
+                help="also tune the FP8 projections (attention, Gated DeltaNet, MLP 56-63) as FP8 targets; "
+                     "the NVFP4 MLP stays the default scheme, so the rest of the block is the r1 context (run f1)")
 a = ap.parse_args()
+if a.fp8 and a.context != "nvfp4":
+    ap.error("--fp8 is defined for the r1 context: pass --context nvfp4")
 
 lo, hi = map(int, a.layers.split("-"))
 layers = list(range(lo, hi + 1))
 if a.truncate:
     layers = [i for i in layers if i < a.truncate]
 target = r"re:.*language_model\.layers\.(%s)\.mlp\.(gate|up|down)_proj$" % "|".join(map(str, layers))
+# Production's FP8 projections: every attention and Gated DeltaNet projection except
+# the tiny a/b gates (BF16 in production), and the MLP of layers 56-63.
+fp8_targets = [
+    r"re:.*language_model\.layers\.\d+\.(self_attn\.(q|k|v|o)_proj|linear_attn\.(in_proj_qkv|in_proj_z|out_proj))$",
+    r"re:.*language_model\.layers\.(56|57|58|59|60|61|62|63)\.mlp\.(gate|up|down)_proj$",
+]
 
 from datasets import Dataset
 from transformers import AutoConfig, Qwen3_5ForConditionalGeneration
@@ -191,6 +202,40 @@ elif a.context == "mxfp4":
 
     AutoRoundModifier.get_unquantized_layer_names = _skip_blocks_without_targets
 
+if a.fp8:
+    # Two schemes in one run. llm-compressor would turn the first config group into
+    # AutoRound's default scheme through a generic converter that maps NVFP4 to a
+    # plain fp4 without its W4A4 activations; the preset string keeps the real NVFP4
+    # (as in r1, whose act_max -> input_global_scale conversion is also keyed on it).
+    # The FP8 layers get their own AutoRound config, recognised by the 8-bit scheme
+    # llm-compressor attached to them (its own target matcher misses block-relative
+    # names). FP8 activations are dynamic per token in production, so AutoRound
+    # tunes their weights only.
+    AutoRoundModifier._mapping_config_to_autoround = lambda self: "NVFP4"
+
+    def _layer_config_with_fp8(self, wrapped_model):
+        config = {}
+        for name, module in wrapped_model.named_modules():
+            scheme = getattr(module, "quantization_scheme", None)
+            if isinstance(module, torch.nn.Linear) and scheme is not None and scheme.weights.num_bits == 8:
+                config[name] = self._quant_scheme_to_autoround_config(scheme)
+        print(f"[fp8] {len(config)} Linears tuned as FP8", flush=True)
+        return config
+
+    AutoRoundModifier._build_layer_config_for_autoround = _layer_config_with_fp8
+
+    _postprocess = AutoRoundModifier._postprocess_qparams
+
+    def _postprocess_as_nvfp4(self, model, registered):
+        saved = self.scheme
+        object.__setattr__(self, "scheme", "NVFP4")
+        try:
+            return _postprocess(self, model, registered)
+        finally:
+            object.__setattr__(self, "scheme", saved)
+
+    AutoRoundModifier._postprocess_qparams = _postprocess_as_nvfp4
+
 rows = [json.loads(l) for l in open(a.calib, encoding="utf-8")][: a.nsamples]
 seqlen = len(rows[0]["input_ids"])
 ds = Dataset.from_dict({
@@ -204,9 +249,14 @@ if a.truncate:
     config.text_config.layer_types = config.text_config.layer_types[: a.truncate]
 model = Qwen3_5ForConditionalGeneration.from_pretrained(a.model, config=config, dtype=torch.bfloat16)
 
+if a.fp8:
+    from compressed_tensors.quantization import preset_name_to_scheme
+    scheme_args = {"config_groups": {"group_nvfp4": preset_name_to_scheme("NVFP4", [target]),
+                                     "group_fp8": preset_name_to_scheme("FP8_DYNAMIC", fp8_targets)}}
+else:
+    scheme_args = {"targets": [target], "scheme": "NVFP4"}
 recipe = AutoRoundModifier(
-    targets=[target],
-    scheme="NVFP4",
+    **scheme_args,
     ignore=[],
     iters=a.iters,
     batch_size=a.batch,
@@ -228,6 +278,6 @@ os.makedirs(a.out, exist_ok=True)
 model.save_pretrained(a.out, save_compressed=True)
 with open(os.path.join(a.out, "autoround_run.json"), "w") as f:
     json.dump({"layers": [layers[0], layers[-1]], "nsamples": len(rows), "seqlen": seqlen,
-               "iters": a.iters, "batch": a.batch, "grad_acc": a.grad_acc, "context": a.context, "lr": a.lr, "truncate": a.truncate,
+               "iters": a.iters, "batch": a.batch, "grad_acc": a.grad_acc, "context": a.context, "fp8": a.fp8, "lr": a.lr, "truncate": a.truncate,
                "calib": os.path.abspath(a.calib), "seconds": round(took)}, f, indent=1)
 print(f"done in {took/60:.1f} min -> {a.out}")
