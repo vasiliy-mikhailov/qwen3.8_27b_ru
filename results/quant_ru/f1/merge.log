@@ -1,0 +1,2 @@
+replaced 0 NVFP4 tensors and 232 FP8 matrices (232 matrices in all)
+FP8 codes changed: median 64.3%; weights moved: median 3.772%, max 4.027%; BF16 scale re-encoding moved them by at most 0.0000%

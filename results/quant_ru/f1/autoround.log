@@ -1,0 +1,258 @@
+[mem] block: before 2.4 GiB, peak 2.4 GiB, 0 s
+2026-09-24T05:22:18.1504 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.0
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.000006 -> iter 95: 0.000003
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 179 s
+2026-09-24T05:25:28.4696 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.1
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.000011 -> iter 90: 0.000007
+[mem] block: before 2.4 GiB, peak 15.8 GiB, 137 s
+2026-09-24T05:27:56.0895 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.2
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.000027 -> iter 90: 0.000019
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 136 s
+2026-09-24T05:30:25.5494 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.3
+[fp8] 4 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.000040 -> iter 39: 0.000027
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 141 s
+2026-09-24T05:32:57.4306 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.4
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.000077 -> iter 39: 0.000043
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 136 s
+2026-09-24T05:35:23.9338 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.5
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.000115 -> iter 90: 0.000066
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-24T05:37:53.6473 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.6
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.000143 -> iter 90: 0.000092
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 138 s
+2026-09-24T05:40:24.7571 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.7
+[fp8] 4 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.000181 -> iter 90: 0.000118
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 144 s
+2026-09-24T05:42:59.7507 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.8
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.000221 -> iter 90: 0.000147
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 137 s
+2026-09-24T05:45:27.2311 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.9
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.000262 -> iter 90: 0.000177
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 136 s
+2026-09-24T05:47:54.6567 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.10
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.000307 -> iter 90: 0.000211
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 137 s
+2026-09-24T05:50:26.6201 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.11
+[fp8] 4 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.000362 -> iter 90: 0.000251
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 145 s
+2026-09-24T05:53:02.6703 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.12
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.000429 -> iter 90: 0.000297
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 138 s
+2026-09-24T05:55:31.4866 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.13
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.000500 -> iter 90: 0.000346
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-24T05:58:01.1899 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.14
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.000574 -> iter 90: 0.000399
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 138 s
+2026-09-24T06:00:33.0383 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.15
+[fp8] 4 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.000668 -> iter 90: 0.000464
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 146 s
+2026-09-24T06:03:09.8527 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.16
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.000782 -> iter 90: 0.000541
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-24T06:05:39.6332 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.17
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.000931 -> iter 90: 0.000642
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-24T06:08:09.2889 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.18
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.001193 -> iter 90: 0.000827
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 138 s
+2026-09-24T06:10:41.2821 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.19
+[fp8] 4 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.001561 -> iter 90: 0.001098
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 146 s
+2026-09-24T06:13:18.2293 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.20
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.001930 -> iter 90: 0.001383
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 138 s
+2026-09-24T06:15:46.7875 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.21
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.002369 -> iter 90: 0.001745
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-24T06:18:16.4120 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.22
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.002772 -> iter 90: 0.002140
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 137 s
+2026-09-24T06:20:47.4579 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.23
+[fp8] 4 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.003193 -> iter 90: 0.002616
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 143 s
+2026-09-24T06:23:21.4909 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.24
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.003654 -> iter 90: 0.003096
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 136 s
+2026-09-24T06:25:48.1136 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.25
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.004151 -> iter 90: 0.003601
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 135 s
+2026-09-24T06:28:14.0348 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.26
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.004897 -> iter 90: 0.004309
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 134 s
+2026-09-24T06:30:41.9677 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.27
+[fp8] 4 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.005679 -> iter 61: 0.005009
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 141 s
+2026-09-24T06:33:14.4665 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.28
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.006404 -> iter 66: 0.005631
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 134 s
+2026-09-24T06:35:39.6357 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.29
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.007301 -> iter 47: 0.006459
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 134 s
+2026-09-24T06:38:04.4358 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.30
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.008655 -> iter 66: 0.007534
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-24T06:40:36.5559 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.31
+[fp8] 4 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.010285 -> iter 66: 0.008960
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 149 s
+2026-09-24T06:43:16.4090 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.32
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.011461 -> iter 66: 0.009947
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 143 s
+2026-09-24T06:45:50.4881 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.33
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.012135 -> iter 64: 0.010493
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 138 s
+2026-09-24T06:48:19.9123 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.34
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.013719 -> iter 87: 0.011898
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 140 s
+2026-09-24T06:50:54.1908 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.35
+[fp8] 4 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.017590 -> iter 94: 0.014875
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 147 s
+2026-09-24T06:53:32.7170 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.36
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.018539 -> iter 87: 0.015762
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-24T06:56:02.7593 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.37
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.020396 -> iter 66: 0.017121
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 138 s
+2026-09-24T06:58:31.9200 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.38
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.020747 -> iter 66: 0.017332
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 138 s
+2026-09-24T07:01:03.4428 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.39
+[fp8] 4 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.023364 -> iter 66: 0.019345
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 144 s
+2026-09-24T07:03:39.0339 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.40
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.023180 -> iter 81: 0.019078
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 138 s
+2026-09-24T07:06:07.8197 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.41
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.024847 -> iter 81: 0.020433
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-24T07:08:38.0010 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.42
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.034749 -> iter 81: 0.026672
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 136 s
+2026-09-24T07:11:07.6715 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.43
+[fp8] 4 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.038530 -> iter 81: 0.029783
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 143 s
+2026-09-24T07:13:41.9767 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.44
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.040778 -> iter 81: 0.031472
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 134 s
+2026-09-24T07:16:07.4348 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.45
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.043575 -> iter 17: 0.033507
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 135 s
+2026-09-24T07:18:33.2724 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.46
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.051945 -> iter 81: 0.038710
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 135 s
+2026-09-24T07:21:02.0808 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.47
+[fp8] 4 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.059163 -> iter 17: 0.043169
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 142 s
+2026-09-24T07:23:35.2201 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.48
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.065068 -> iter 17: 0.046809
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 135 s
+2026-09-24T07:26:01.0024 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.49
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.072303 -> iter 17: 0.051240
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 135 s
+2026-09-24T07:28:27.1834 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.50
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.098683 -> iter 46: 0.069883
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 136 s
+2026-09-24T07:30:56.9789 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.51
+[fp8] 4 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.140323 -> iter 41: 0.091655
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 143 s
+2026-09-24T07:33:31.2590 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.52
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.170334 -> iter 17: 0.110933
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 134 s
+2026-09-24T07:35:56.7436 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.53
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.212508 -> iter 41: 0.137671
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 135 s
+2026-09-24T07:38:23.3033 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.54
+[fp8] 3 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.334141 -> iter 94: 0.223729
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 136 s
+2026-09-24T07:40:53.2635 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.55
+[fp8] 4 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.337651 -> iter 17: 0.218639
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 142 s
+2026-09-24T07:43:26.0237 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.56
+[fp8] 6 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.381640 -> iter 17: 0.244405
+[mem] block: before 0.8 GiB, peak 10.3 GiB, 99 s
+2026-09-24T07:45:16.4424 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.57
+[fp8] 6 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.435350 -> iter 17: 0.273740
+[mem] block: before 0.8 GiB, peak 10.3 GiB, 99 s
+2026-09-24T07:47:06.8369 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.58
+[fp8] 6 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.666158 -> iter 17: 0.440109
+[mem] block: before 0.8 GiB, peak 10.3 GiB, 101 s
+2026-09-24T07:49:01.8899 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.59
+[fp8] 7 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 0.616127 -> iter 17: 0.363000
+[mem] block: before 0.8 GiB, peak 11.5 GiB, 97 s
+2026-09-24T07:50:50.1044 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.60
+[fp8] 6 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.741003 -> iter 17: 0.428844
+[mem] block: before 0.8 GiB, peak 10.3 GiB, 98 s
+2026-09-24T07:52:39.4845 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.61
+[fp8] 6 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 0.895237 -> iter 17: 0.515185
+[mem] block: before 0.8 GiB, peak 10.3 GiB, 98 s
+2026-09-24T07:54:29.0445 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.62
+[fp8] 6 Linears tuned as FP8
+quantized 8/8 layers in the block, loss iter 0: 1.168012 -> iter 17: 0.682464
+[mem] block: before 0.8 GiB, peak 10.3 GiB, 100 s
+2026-09-24T07:56:19.7667 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.63
+[fp8] 7 Linears tuned as FP8
+quantized 7/7 layers in the block, loss iter 0: 1.704204 -> iter 41: 1.023720
+[mem] block: before 0.8 GiB, peak 11.5 GiB, 97 s
+done in 156.3 min -> /models/ar-f1

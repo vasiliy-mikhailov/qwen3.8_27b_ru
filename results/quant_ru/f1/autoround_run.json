@@ -1,0 +1,17 @@
+{
+ "layers": [
+  0,
+  55
+ ],
+ "nsamples": 256,
+ "seqlen": 2048,
+ "iters": 100,
+ "batch": 2,
+ "grad_acc": 4,
+ "context": "nvfp4",
+ "fp8": true,
+ "lr": null,
+ "truncate": null,
+ "calib": "/w/data/calib/calib_ru.jsonl",
+ "seconds": 9379
+}

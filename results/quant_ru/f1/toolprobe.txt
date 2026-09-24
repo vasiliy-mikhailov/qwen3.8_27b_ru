@@ -1,0 +1,1 @@
+{"arm": "f1", "turns": 40, "outcomes": {"clean": 40}, "seconds": 37}
