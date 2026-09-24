@@ -1,0 +1,8 @@
+(EngineCore pid=287) INFO 09-24 12:10:46 [__init__.py:665] Selected CutlassFP8ScaledMMLinearKernel for CompressedTensorsW8A8Fp8
+(EngineCore pid=287) INFO 09-24 12:10:46 [__init__.py:1077] Using FlashInferCutlassNvFp4LinearKernel for NVFP4 GEMM
+(EngineCore pid=287) INFO 09-24 12:10:54 [default_loader.py:430] Loading weights took 7.85 seconds
+(EngineCore pid=287) INFO 09-24 12:10:54 [gpu_model_runner.py:5405] Model loading took 20.32 GiB memory and 8.453925 seconds
+(EngineCore pid=287) INFO 09-24 12:12:54 [gpu_worker.py:563] Available KV cache memory: 4.61 GiB
+(EngineCore pid=287) INFO 09-24 12:12:54 [kv_cache_utils.py:2235] GPU KV cache size: 112,347 tokens
+(EngineCore pid=287) INFO 09-24 12:12:54 [kv_cache_utils.py:2236] Maximum concurrency for 16,384 tokens per request: 6.86x
+(EngineCore pid=287) INFO 09-24 12:13:03 [core.py:348] init engine (profile, create kv cache, warmup model) took 128.38 s (compilation: 72.12 s)

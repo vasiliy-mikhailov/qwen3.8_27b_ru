@@ -1,0 +1,1 @@
+{"arm": "vllm_r1", "turns": 40, "outcomes": {"clean": 40}, "seconds": 113}
