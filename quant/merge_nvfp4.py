@@ -53,19 +53,24 @@ a = ap.parse_args()
 
 new, fp8 = {}, {}
 for d in a.ar:
+    # a tensor and its scale can sit in different shards, so pair them over
+    # the whole directory, not file by file
+    where = {}
     for f in sorted(glob.glob(os.path.join(d, "*.safetensors"))):
         with safe_open(f, "pt") as s:
-            keys = set(s.keys())
-            for k in keys:
-                # an NVFP4 matrix is one with packed codes; FP8 rows of MLP 56-63
-                # also carry a weight_scale and must not be picked up here
-                if a.take in ("nvfp4", "both") and ".mlp." in k and k.rsplit(".", 1)[1] in SUFFIX \
-                        and k.rsplit(".", 1)[0] + ".weight_packed" in keys:
-                    new[k] = s.get_tensor(k)
-                if a.take in ("fp8", "both") and k.endswith(".weight") and k[:-7] + ".weight_scale" in keys:
-                    w = s.get_tensor(k)
-                    if w.dtype == torch.float8_e4m3fn:
-                        fp8[k] = (w, s.get_tensor(k[:-7] + ".weight_scale"))
+            for k in s.keys():
+                where[k] = f
+    get = lambda k: safe_open(where[k], "pt").get_tensor(k)
+    for k in where:
+        # an NVFP4 matrix is one with packed codes; FP8 rows of MLP 56-63
+        # also carry a weight_scale and must not be picked up here
+        if a.take in ("nvfp4", "both") and ".mlp." in k and k.rsplit(".", 1)[1] in SUFFIX \
+                and k.rsplit(".", 1)[0] + ".weight_packed" in where:
+            new[k] = get(k)
+        if a.take in ("fp8", "both") and k.endswith(".weight") and k[:-7] + ".weight_scale" in where:
+            w = get(k)
+            if w.dtype == torch.float8_e4m3fn:
+                fp8[k] = (w, get(k[:-7] + ".weight_scale"))
 if not new and not fp8:
     raise SystemExit(f"nothing to take ({a.take}) in " + ", ".join(a.ar))
 

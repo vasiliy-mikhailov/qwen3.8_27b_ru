@@ -1,6 +1,7 @@
 #!/bin/sh
 # Evaluate one ninfer artifact the way run_full.sh evaluates its own: perplexity
-# on the baseline corpus, the 80 comment prompts, the tool-call probe. Serving
+# on the baseline corpus, the 80 comment prompts, the tool-call probe, the
+# second set of 80 prompts. Serving
 # flags match production except the context, which can be cut for artifacts
 # whose weights leave no room for 262k tokens of KV (numerics do not depend on it).
 # Production is stopped for the GPU and restarted whatever happens.
@@ -40,4 +41,9 @@ tail -1 $R/gen.log
 log "tool probe"
 python3 $W/quant/toolcall_probe.py --url http://127.0.0.1:8097 --model ar --key $KEY --arm $TAG \
   --out $R/toolprobe.jsonl | tee $R/toolprobe.txt
+log "generate set 2"
+mkdir -p $W/results/quant_ru/set2
+python3 $W/train/gen_api.py --url http://127.0.0.1:8097 --model ar --key $KEY --arm $TAG \
+  --prompts $W/train/prompts_comments2.jsonl --out $W/results/quant_ru/set2/gen_$TAG.jsonl --workers 1 \
+  --extra '{"reasoning_effort": "none", "chat_template_kwargs": {"enable_thinking": false}}' 2>&1 | tail -1
 log ALLDONE
