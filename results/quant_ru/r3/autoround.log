@@ -1,0 +1,130 @@
+[mem] block: before 2.4 GiB, peak 2.4 GiB, 0 s
+2026-09-23T18:51:56.1213 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.0
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 183 s
+2026-09-23T18:55:10.1585 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.1
+[mem] block: before 2.4 GiB, peak 15.8 GiB, 148 s
+2026-09-23T18:57:48.8365 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.2
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 143 s
+2026-09-23T19:00:25.0823 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.3
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 161 s
+2026-09-23T19:03:16.8554 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.4
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 140 s
+2026-09-23T19:05:47.7672 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.5
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 143 s
+2026-09-23T19:08:21.6909 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.6
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 141 s
+2026-09-23T19:10:56.1225 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.7
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 154 s
+2026-09-23T19:13:40.7310 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.8
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 140 s
+2026-09-23T19:16:11.1738 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.9
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-23T19:18:41.5341 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.10
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-23T19:21:14.4920 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.11
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 145 s
+2026-09-23T19:23:50.8685 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.12
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-23T19:26:20.9549 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.13
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 138 s
+2026-09-23T19:28:49.8151 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.14
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-23T19:31:22.3081 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.15
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 147 s
+2026-09-23T19:34:00.5546 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.16
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 140 s
+2026-09-23T19:36:31.4153 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.17
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 140 s
+2026-09-23T19:39:02.7554 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.18
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 140 s
+2026-09-23T19:41:36.4558 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.19
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 149 s
+2026-09-23T19:44:16.5698 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.20
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 140 s
+2026-09-23T19:46:47.9953 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.21
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 140 s
+2026-09-23T19:49:19.0558 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.22
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 140 s
+2026-09-23T19:51:52.3955 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.23
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 145 s
+2026-09-23T19:54:28.0520 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.24
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 137 s
+2026-09-23T19:56:56.1761 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.25
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 137 s
+2026-09-23T19:59:24.2028 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.26
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 137 s
+2026-09-23T20:01:55.2320 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.27
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 148 s
+2026-09-23T20:04:34.8337 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.28
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 140 s
+2026-09-23T20:07:05.9187 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.29
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 140 s
+2026-09-23T20:09:37.2593 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.30
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 141 s
+2026-09-23T20:12:12.0603 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.31
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 149 s
+2026-09-23T20:14:51.7342 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.32
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 140 s
+2026-09-23T20:17:23.2575 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.33
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 141 s
+2026-09-23T20:19:55.2211 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.34
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-23T20:22:28.1807 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.35
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 150 s
+2026-09-23T20:25:08.7375 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.36
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 144 s
+2026-09-23T20:27:43.5610 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.37
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 143 s
+2026-09-23T20:30:18.0421 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.38
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 146 s
+2026-09-23T20:32:57.4302 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.39
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 151 s
+2026-09-23T20:35:39.9458 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.40
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 144 s
+2026-09-23T20:38:15.4065 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.41
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 146 s
+2026-09-23T20:40:52.0838 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.42
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 142 s
+2026-09-23T20:43:28.0266 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.43
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 147 s
+2026-09-23T20:46:06.0495 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.44
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-23T20:48:36.3745 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.45
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-23T20:51:06.5776 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.46
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 140 s
+2026-09-23T20:53:40.2250 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.47
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 145 s
+2026-09-23T20:56:16.0964 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.48
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 138 s
+2026-09-23T20:58:45.3573 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.49
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-23T21:01:15.4172 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.50
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 140 s
+2026-09-23T21:03:48.9412 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.51
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 145 s
+2026-09-23T21:06:25.6706 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.52
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 138 s
+2026-09-23T21:08:55.2179 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.53
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 137 s
+2026-09-23T21:11:23.3571 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.54
+[mem] block: before 0.8 GiB, peak 15.8 GiB, 139 s
+2026-09-23T21:13:55.6019 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.55
+[mem] block: before 0.8 GiB, peak 17.3 GiB, 145 s
+2026-09-23T21:16:32.0213 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.56
+[mem] block: before 0.8 GiB, peak 4.5 GiB, 20 s
+2026-09-23T21:17:03.2591 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.57
+[mem] block: before 0.8 GiB, peak 4.5 GiB, 20 s
+2026-09-23T21:17:34.1607 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.58
+[mem] block: before 0.8 GiB, peak 4.5 GiB, 20 s
+2026-09-23T21:18:08.6835 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.59
+[mem] block: before 0.8 GiB, peak 10.2 GiB, 24 s
+2026-09-23T21:18:44.2433 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.60
+[mem] block: before 0.8 GiB, peak 4.5 GiB, 20 s
+2026-09-23T21:19:15.4432 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.61
+[mem] block: before 0.8 GiB, peak 4.5 GiB, 20 s
+2026-09-23T21:19:46.5901 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.62
+[mem] block: before 0.8 GiB, peak 4.5 GiB, 20 s
+2026-09-23T21:20:19.3124 | apply_autoround | INFO - Applying AutoRound on layer model.language_model.layers.63
+[mem] block: before 0.8 GiB, peak 10.1 GiB, 24 s
+done in 149.4 min -> /models/ar-r3
