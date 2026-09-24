@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 1080px; height: 1920px; overflow: hidden;
+    background: #0e1013; color: #f3f2ee;
+    font-family: -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { box-sizing: border-box; width: 1080px; padding: 300px 88px 0; display: flex; flex-direction: column; }
+  .kicker { font-size: 30px; letter-spacing: 1px; color: #9aa3ad; margin-bottom: 26px; }
+  .kicker b { color: #f3f2ee; font-weight: 600; }
+  .h { font-size: 80px; line-height: 1.05; font-weight: 700; letter-spacing: -1.5px; margin: 0; }
+  .chat { margin: 40px 0 52px; display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+  .b { max-width: 860px; background: #1b2028; border-radius: 30px 30px 30px 10px;
+       padding: 20px 28px; font-size: 35px; line-height: 1.3; color: #e9e8e4; }
+  .b.code { font-family: "SF Mono", Menlo, monospace; font-size: 30px; color: #cfd6df; }
+  .e { text-decoration: underline wavy #ff5a5a; text-decoration-thickness: 3px; text-underline-offset: 10px; }
+  .punch { margin-top: 84px; font-size: 84px; line-height: 1.05; font-weight: 800; letter-spacing: -2px; color: #5aa2ff; }
+  .fine { margin-top: 30px; font-size: 31px; line-height: 1.4; color: #c9ccd1; }
+  .fine b { color: #f3f2ee; font-weight: 600; }
+  .link { margin-top: 72px; padding: 22px 30px; border-radius: 18px; background: #171b21; border: 2px solid #2a3140; }
+  .link .t { font-size: 24px; color: #9aa3ad; margin-bottom: 6px; }
+  .link .u { font-size: 32px; font-weight: 600; color: #f3f2ee; }
+  .foot { margin-top: 28px; font-size: 23px; line-height: 1.35; color: #7d8590; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker"><b>ninfer</b> · RTX 5090 · Qwen3.8-27B NVFP4</div>
+
+  <p class="h">Устал получать</p>
+
+  <div class="chat">
+    <div class="b">…как если бы мы обсуждали это на <span class="e">кофепейзе</span>.</div>
+    <div class="b"><span class="e">Двойной списание</span> денег с карты.</div>
+    <div class="b code">// 2. Запускаем первую <span class="e">горуутину</span></div>
+    <div class="b">Помощник вызывает курьера за <span class="e">специциями</span>.</div>
+  </div>
+
+  <p class="h">со скоростью<br>300 токенов/с?</p>
+
+  <div class="punch">Скорость оставили.</div>
+
+  <div class="fine">Ошибок — <b>на треть меньше</b>: 0,70 против 1,03 на страницу.<br>Тот же NVFP4, тот же размер, те же ядра.</div>
+
+  <div class="link">
+    <div class="t">Hugging Face</div>
+    <div class="u">vasiliy-mikhailov/Qwen3.8-27B-nvfp4-ru-NInfer</div>
+  </div>
+
+  <div class="foot">Все цитаты — настоящие ответы исходного NVFP4. Ошибки считали<br>LLM-агенты вслепую: 160 заданий, p = 0,004.</div>
+</div>
+</body>
+</html>
