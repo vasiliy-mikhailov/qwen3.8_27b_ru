@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 1080px; height: 1920px; overflow: hidden;
+    background: #0e1013; color: #f3f2ee;
+    font-family: -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { position: absolute; left: 88px; right: 88px; top: 0; bottom: 0; }
+  .kicker { position: absolute; top: 232px; font-size: 34px; letter-spacing: 1px; color: #9aa3ad; }
+  .kicker b { color: #f3f2ee; font-weight: 600; }
+  h1 { position: absolute; top: 290px; margin: 0; font-size: 92px; line-height: 1.02; font-weight: 700; letter-spacing: -1.5px; }
+  .sub { position: absolute; top: 606px; font-size: 38px; line-height: 1.35; color: #c9ccd1; }
+  .big { position: absolute; top: 752px; }
+  .num { font-size: 210px; font-weight: 800; letter-spacing: -8px; color: #5aa2ff; line-height: 1; }
+  .numtxt { font-size: 40px; line-height: 1.25; color: #f3f2ee; font-weight: 500; margin-top: 6px; }
+  .bars { position: absolute; top: 1068px; left: 0; right: 0; }
+  .row { margin-bottom: 30px; }
+  .lab { display: flex; justify-content: space-between; font-size: 32px; color: #c9ccd1; margin-bottom: 12px; }
+  .lab .v { color: #f3f2ee; font-weight: 600; }
+  .track { height: 34px; border-radius: 8px; background: #1d2127; }
+  .bar { height: 34px; border-radius: 8px; }
+  .facts { position: absolute; top: 1318px; left: 0; right: 0; font-size: 33px; line-height: 1.3; }
+  .fact { display: flex; gap: 20px; margin-bottom: 22px; color: #e6e5e1; }
+  .dot { flex: none; width: 14px; height: 14px; border-radius: 50%; background: #5aa2ff; margin-top: 15px; }
+  .link { position: absolute; top: 1528px; left: 0; right: 0; padding: 26px 30px; border-radius: 18px; background: #171b21; border: 2px solid #2a3140; }
+  .link .t { font-size: 26px; color: #9aa3ad; margin-bottom: 8px; }
+  .link .u { font-size: 33px; font-weight: 600; color: #f3f2ee; line-height: 1.3; word-break: break-all; }
+  .foot { position: absolute; top: 1688px; font-size: 24px; line-height: 1.35; color: #7d8590; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker"><b>ninfer</b> · RTX 5090 · Qwen3.8-27B NVFP4</div>
+  <h1>Меньше ошибок<br>в русском.<br>Тот же размер.</h1>
+  <div class="sub">4-битные веса переокруглены AutoRound<br>под русский технический текст</div>
+
+  <div class="big">
+    <div class="num">−32%</div>
+    <div class="numtxt">языковых ошибок на страницу текста</div>
+  </div>
+
+  <div class="bars">
+    <div class="row">
+      <div class="lab"><span>официальный NVFP4</span><span class="v">1,03 на стр.</span></div>
+      <div class="track"><div class="bar" style="width:100%; background:#6b727c;"></div></div>
+    </div>
+    <div class="row">
+      <div class="lab"><span>переокруглённый (r1)</span><span class="v">0,70 на стр.</span></div>
+      <div class="track"><div class="bar" style="width:68%; background:#5aa2ff;"></div></div>
+    </div>
+  </div>
+
+  <div class="facts">
+    <div class="fact"><span class="dot"></span><span>тот же размер 23,7 ГБ, те же ядра и скорость</span></div>
+    <div class="fact"><span class="dot"></span><span>160 заданий, слепая разметка, p = 0,004</span></div>
+    <div class="fact"><span class="dot"></span><span>вызовы инструментов: 40 из 40</span></div>
+  </div>
+
+  <div class="link">
+    <div class="t">Hugging Face</div>
+    <div class="u">vasiliy-mikhailov/Qwen3.8-27B-nvfp4-ru-NInfer</div>
+  </div>
+
+  <div class="foot">Ошибки считали LLM-агенты вслепую, страница = 250 русских слов.<br>Код и все замеры: github.com/vasiliy-mikhailov/qwen3.8_27b_ru</div>
+</div>
+</body>
+</html>
