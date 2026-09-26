@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 1200px; height: 1500px; overflow: hidden;
+    background: #0e1013; color: #f3f2ee;
+    font-family: -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { box-sizing: border-box; width: 1200px; padding: 84px 90px 0; display: flex; flex-direction: column; }
+  .kicker { font-size: 28px; letter-spacing: 1px; color: #9aa3ad; margin-bottom: 18px; }
+  .kicker b { color: #f3f2ee; font-weight: 600; }
+  .h { font-size: 76px; line-height: 1.05; font-weight: 700; letter-spacing: -1.5px; margin: 0; }
+  .cards { margin: 30px 0 38px; display: flex; flex-direction: column; gap: 16px; }
+  .card { background: #161a20; border: 2px solid #232933; border-radius: 18px; padding: 16px 26px 16px; }
+  .lang { font-size: 20px; color: #7d8590; margin-bottom: 6px; letter-spacing: .5px; }
+  pre { margin: 0; font-family: "SF Mono", Menlo, monospace; font-size: 25px; line-height: 1.5; color: #d8dee6; white-space: pre; }
+  .c { color: #8b949e; } .k { color: #ff7b72; } .f { color: #d2a8ff; } .s { color: #a5d6ff; }
+  .e { color: #f3f2ee; text-decoration: underline wavy #ff5a5a; text-decoration-thickness: 3px; text-underline-offset: 8px; }
+  .gloss { margin-top: 10px; font-size: 22px; color: #ff8a8a; }
+  .h2 { margin: 0; font-size: 50px; line-height: 1.15; font-weight: 700; letter-spacing: -1px; }
+  .punch { margin-top: 40px; font-size: 76px; line-height: 1.05; font-weight: 800; letter-spacing: -2px; color: #5aa2ff; }
+  .punch2 { margin-top: 8px; font-size: 50px; line-height: 1.15; font-weight: 700; letter-spacing: -1px; }
+  .fine { margin-top: 22px; font-size: 27px; line-height: 1.4; color: #c9ccd1; }
+  .link { margin-top: 44px; padding: 20px 28px; border-radius: 18px; background: #171b21; border: 2px solid #2a3140; font-size: 29px; font-weight: 600; }
+  .link span { display: block; font-size: 21px; font-weight: 400; color: #9aa3ad; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker"><b>NInfer</b> · RTX 5090 · Qwen3.8-27B NVFP4 · Russian</div>
+  <p class="h">Familiar?</p>
+
+  <div class="cards">
+    <div class="card"><div class="lang">python</div><pre><span class="k">def</span> <span class="f">merge</span>(a, b):
+    <span class="s">"""<span class="e">Слиять</span> два отсортированных
+    по возрастанию списка в один.</span></pre><div class="gloss">“Слиять” is not a word: “merge” is “слить”</div></div>
+    <div class="card"><div class="lang">go</div><pre>ch := <span class="f">make</span>(<span class="k">chan</span> int)
+<span class="c">// 2. Запускаем первую <span class="e">горуутину</span> (отправитель).</span></pre><div class="gloss">goroutine, with an extra letter</div></div>
+    <div class="card"><div class="lang">elixir</div><pre><span class="c"># Получаем текущее время в миллисекундах
+# с использованием <span class="e">монохронного</span> таймера</span>
+now = System.<span class="f">monotonic_time</span>(<span class="s">:millisecond</span>)</pre><div class="gloss">the comment says “monochronic”; the code right below says monotonic</div></div>
+  </div>
+
+  <p class="h2">All at 300 tokens per second.</p>
+  <div class="punch">We kept the speed.</div>
+  <div class="punch2">And the errors. A third fewer.</div>
+  <div class="fine">0.70 hard errors per page instead of 1.03 · same NVFP4, same size, same kernels<br>Real answers of the original model · counted blind by LLM annotators</div>
+  <div class="link"><span>Hugging Face</span>vasiliy-mikhailov/Qwen3.8-27B-nvfp4-ru-NInfer</div>
+</div>
+</body>
+</html>
