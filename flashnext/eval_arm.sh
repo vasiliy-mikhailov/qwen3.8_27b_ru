@@ -1,9 +1,10 @@
 #!/bin/sh
 # Evaluate one Flash Next GGUF the way the baseline was measured: a strata pack
 # built from it, production's serving config with only the pack, the GGUF and
-# the log swapped, both prompt sets (greedy, thinking off, 700 tokens, two
-# streams) and the tool-call probe. Production is stopped for the GPU and
-# restarted whatever happens.
+# the log swapped, every prompt set in train/ (greedy, thinking off, 700
+# tokens, eight streams) and the tool-call probe. Production is stopped for the
+# GPU and restarted whatever happens. Sets already generated are skipped, so a
+# rerun only adds the sets that appeared since.
 #
 # Usage: eval_arm.sh TAG GGUF_DIR [PACK]   (PACK defaults to TAG; built if missing)
 set -u
@@ -33,6 +34,17 @@ c["log"] = f"/work/eval-{tag}.log"
 json.dump(c, open(dst, "w"), indent=1)
 EOF
 
+todo() {
+  for set in 1 2 3 4 5 6; do
+    P=$W/train/prompts_comments.jsonl; [ $set = 1 ] || P=$W/train/prompts_comments$set.jsonl
+    [ -f $P ] || continue
+    [ -s $R/gen_set$set.jsonl ] && [ $(wc -l < $R/gen_set$set.jsonl) -ge $(wc -l < $P) ] && continue
+    echo $set
+  done
+}
+SETS=$(todo)
+[ -z "$SETS" ] && [ -s $R/toolprobe.jsonl ] && { log "$TAG: nothing to do"; exit 0; }
+
 KEY=probe-$(date +%s)
 docker stop -t 120 strata-flashnext >/dev/null
 trap 'docker rm -f fn-eval >/dev/null 2>&1; cat /home/vmihaylov/flash-next/UD-Q3_K_XL/*00002-of-00003.gguf >/dev/null; docker start strata-flashnext >/dev/null; log "prod restarted"' EXIT
@@ -50,13 +62,15 @@ done
 [ "$st" = 200 ] || { log "not ready after 20 min"; docker logs --tail 30 fn-eval; exit 1; }
 log "ready"
 EXTRA='{"reasoning_effort": "none", "chat_template_kwargs": {"enable_thinking": false}}'
-for set in 1 2; do
-  P=$W/train/prompts_comments.jsonl; [ $set = 2 ] && P=$W/train/prompts_comments2.jsonl
+for set in $SETS; do
+  P=$W/train/prompts_comments.jsonl; [ $set = 1 ] || P=$W/train/prompts_comments$set.jsonl
   python3 $W/train/gen_api.py --url http://127.0.0.1:8099 --model qwen-3.8-flash-next --key $KEY --arm $TAG \
-    --prompts $P --out $R/gen_set$set.jsonl --workers 2 --extra "$EXTRA" > $R/gen_set$set.log 2>&1
+    --prompts $P --out $R/gen_set$set.jsonl --workers 8 --extra "$EXTRA" > $R/gen_set$set.log 2>&1
   log "set $set: $(tail -1 $R/gen_set$set.log)"
 done
-python3 $W/quant/toolcall_probe.py --url http://127.0.0.1:8099 --model qwen-3.8-flash-next --key $KEY --arm $TAG \
-  --out $R/toolprobe.jsonl > $R/toolprobe.txt 2>&1
-log "tool probe: $(tail -1 $R/toolprobe.txt)"
+if [ ! -s $R/toolprobe.jsonl ]; then
+  python3 $W/quant/toolcall_probe.py --url http://127.0.0.1:8099 --model qwen-3.8-flash-next --key $KEY --arm $TAG \
+    --out $R/toolprobe.jsonl > $R/toolprobe.txt 2>&1
+  log "tool probe: $(tail -1 $R/toolprobe.txt)"
+fi
 log ALLDONE
