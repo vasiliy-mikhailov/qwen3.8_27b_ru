@@ -1,0 +1,1 @@
+{"arm": "fn_q3_ctl", "turns": 40, "outcomes": {"clean": 36, "wrong_tool": 4}, "seconds": 35}

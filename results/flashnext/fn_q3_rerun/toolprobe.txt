@@ -1,0 +1,1 @@
+{"arm": "fn_q3_rerun", "turns": 40, "outcomes": {"clean": 35, "leak": 2, "wrong_tool": 3}, "seconds": 38}
