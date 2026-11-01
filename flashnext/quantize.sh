@@ -1,5 +1,5 @@
 #!/bin/sh
-# Rebuild UD-Q3_K_XL's exact per-tensor layout from Q8_0 with a given imatrix.
+# Rebuild UD-Q3_K_XL's exact per-tensor layout from Q8_0 or BF16 with a given imatrix.
 # CPU only: production keeps serving (low CPU weight, so it wins any contention).
 # Two runs that differ only in the imatrix (unsloth's vs Russian) isolate what
 # the calibration is worth. Afterwards every tensor the imatrix does not steer
@@ -7,13 +7,14 @@
 # copied from UD-Q3_K_XL, so an arm differs from production only where the
 # imatrix acts.
 #
-# Usage: quantize.sh TAG IMATRIX_FILE   (file under /home/vmihaylov/flash-next)
+# Usage: quantize.sh TAG IMATRIX_FILE [SOURCE_DIR]   (imatrix under /home/vmihaylov/flash-next;
+#        source defaults to the Q8_0 download)
 set -u
 TAG=$1; IMAT=$2
-FN=/home/vmihaylov/flash-next; Q8=/mnt/steam/flash-next/Q8_0
+FN=/home/vmihaylov/flash-next; Q8=${3:-/mnt/steam/flash-next/Q8_0}
 IMG=ghcr.io/ggml-org/llama.cpp:full-cuda
 FIRST=$(ls $Q8/*-00001-of-*.gguf | head -1)
-ls $Q8/*.part >/dev/null 2>&1 && { echo "Q8_0 still downloading"; exit 1; }
+ls $Q8/*.part >/dev/null 2>&1 && { echo "source still downloading"; exit 1; }
 mkdir -p $FN/$TAG
 echo "$(date +%H:%M:%S) quantize $TAG from $(basename $FIRST) with $IMAT"
 docker run --rm --cpu-shares 128 --user $(id -u):$(id -g) -v $FN:/fn -v $Q8:/q8:ro --entrypoint /app/llama-quantize $IMG \
