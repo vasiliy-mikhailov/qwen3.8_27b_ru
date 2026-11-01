@@ -1,7 +1,8 @@
 #!/bin/sh
 # Evaluate one Flash Next GGUF the way the baseline was measured: a strata pack
-# built from it, production's serving config with only the pack, the GGUF and
-# the log swapped, every prompt set in train/ (greedy, thinking off, 700
+# built from it, the Q3 production serving config of 2026-11-01
+# (strata-flashnext.json.p8-nobmtp; production itself has moved on) with only
+# the pack, the GGUF and the log swapped, every prompt set in train/ (greedy, thinking off, 700
 # tokens, eight streams) and the tool-call probe. Production is stopped for the
 # GPU and restarted whatever happens. Sets already generated are skipped, so a
 # rerun only adds the sets that appeared since.
@@ -22,7 +23,7 @@ if [ ! -f $S/packs/$PACK/dense.bin ]; then
     tools/iq_pack.py --gguf /models/$FIRST --out /work/packs/$PACK --compat-bf16 > $R/pack.log 2>&1
   [ -f $S/packs/$PACK/dense.bin ] || { tail -5 $R/pack.log; log "pack failed"; exit 1; }
 fi
-python3 - $S/strata-flashnext.json $S/eval-$TAG.json $PACK $FIRST $TAG <<'EOF'
+python3 - $S/strata-flashnext.json.p8-nobmtp $S/eval-$TAG.json $PACK $FIRST $TAG <<'EOF'
 import json, sys
 src, dst, pack, first, tag = sys.argv[1:]
 c = json.load(open(src))
