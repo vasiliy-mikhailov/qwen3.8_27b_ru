@@ -1,0 +1,2 @@
+{"arm": "fn_q3", "turns": 40, "outcomes": {"clean": 37, "wrong_tool": 3}, "seconds": 139}
+PROBE_DONE
