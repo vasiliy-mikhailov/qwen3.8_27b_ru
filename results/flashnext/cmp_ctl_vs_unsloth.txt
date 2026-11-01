@@ -1,0 +1,15 @@
+type mismatches: 0
+F32        557 tensors,   389 identical, differing bytes median 47.7%
+Q8_0       502 tensors,   502 identical
+IQ3_XXS     94 tensors,     0 identical, differing bytes median 4.5%
+IQ4_NL      44 tensors,     0 identical, differing bytes median 9.8%
+BF16        24 tensors,    24 identical
+IQ4_XS       2 tensors,     0 identical, differing bytes median 7.5%
+Q6_K         1 tensors,     0 identical, differing bytes median 18.8%
+
+# The 168 differing F32 tensors are blk.N.hc_attn_inject, hc_ffn_inject (48 each),
+# ssm_alpha, ssm_beta (36 each): exact F32 in UD-Q3_K_XL, Q8_0 in the Q8_0 source,
+# relative error 0.6-1.0%. They, per_layer_token_embd (IQ4_NL, no imatrix entry) and
+# output.weight (Q6_K, no imatrix entry) were then copied from UD-Q3_K_XL by
+# quant/graft_gguf.py: "already identical 416, copied F32 168, copied IQ4_NL 1,
+# copied Q6_K 1, steered, kept 638".
