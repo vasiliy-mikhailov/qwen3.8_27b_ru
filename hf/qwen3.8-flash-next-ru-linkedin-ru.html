@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 0; }
+  body {
+    width: 1200px; height: 1500px; overflow: hidden;
+    background: #0e1013; color: #f3f2ee;
+    font-family: -apple-system, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { box-sizing: border-box; width: 1200px; padding: 56px 90px 0; display: flex; flex-direction: column; }
+  .kicker { font-size: 29px; letter-spacing: 1px; color: #9aa3ad; margin-bottom: 22px; }
+  .kicker b { color: #f3f2ee; font-weight: 600; }
+  .h { font-size: 70px; line-height: 1.05; font-weight: 700; letter-spacing: -1.5px; margin: 0; }
+  .cards { margin: 24px 0 28px; display: flex; flex-direction: column; gap: 18px; }
+  .card { background: #161a20; border: 2px solid #232933; border-radius: 18px; padding: 18px 26px 20px; }
+  .lang { font-family: -apple-system, sans-serif; font-size: 21px; color: #7d8590; margin-bottom: 8px; letter-spacing: .5px; }
+  pre { margin: 0; font-family: "SF Mono", Menlo, monospace; font-size: 25px; line-height: 1.5; color: #d8dee6; white-space: pre; }
+  .c { color: #8b949e; }
+  .k { color: #ff7b72; }
+  .f { color: #d2a8ff; }
+  .s { color: #a5d6ff; }
+  .e { color: #f3f2ee; text-decoration: underline wavy #ff5a5a; text-decoration-thickness: 3px; text-underline-offset: 8px; }
+  .h2 { margin: 0; font-size: 52px; line-height: 1.15; font-weight: 700; letter-spacing: -1px; color: #f3f2ee; }
+  .punch2 { margin-top: 10px; font-size: 52px; line-height: 1.15; font-weight: 700; letter-spacing: -1px; color: #f3f2ee; }
+  .punch { margin-top: 22px; font-size: 68px; line-height: 1.05; font-weight: 800; letter-spacing: -2px; color: #5aa2ff; }
+  .fine { margin-top: 26px; font-size: 30px; line-height: 1.4; color: #c9ccd1; }
+  .fine b { color: #f3f2ee; font-weight: 600; }
+  .link { margin-top: 30px; padding: 20px 28px; border-radius: 18px; background: #171b21; border: 2px solid #2a3140; }
+  .link .t { font-size: 23px; color: #9aa3ad; margin-bottom: 6px; }
+  .link .u { font-size: 31px; font-weight: 600; color: #f3f2ee; }
+  .foot { margin-top: 22px; font-size: 22px; line-height: 1.35; color: #7d8590; }
+
+  .gloss { margin-top: 10px; font-family: -apple-system, sans-serif; font-size: 22px; color: #ff8a8a; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="kicker"><b>Qwen3.8-Flash-Next</b> · 3-битный GGUF · одна RTX PRO 6000</div>
+
+  <p class="h">Откалибровал квант на русском.</p>
+
+  <div class="cards">
+    <div class="card"><div class="lang">python · docstring</div><pre><span class="s">"""Проверяет корректность номера банковской
+    карты по алгоритму Луна.
+    …
+    1. Начинаем с <span class="e">правойmost</span> цифры (контрольная цифра).</span></pre><div class="gloss">правойmost — наполовину по-английски</div></div>
+    <div class="card"><div class="lang">README</div><pre>3. <b>Загрузки</b> готового архива
+   в<span class="e">指定ованный</span> бакет Amazon S3.</pre><div class="gloss">иероглиф внутри русского слова</div></div>
+    <div class="card"><div class="lang">kotlin · код-ревью</div><pre>- <span class="e">Брандмауэры</span>: <span class="s">[Bracket(100, 0.1), Bracket(null, 0.2)]</span></pre><div class="gloss">налоговые ступени стали брандмауэрами</div></div>
+  </div>
+
+  <p class="h2">KL: ближе к эталону, чем контроль.</p>
+
+  <div class="punch">Слепая разметка: +36 % ошибок.</div>
+
+  <div class="fine">Тот же конвейер, поменялась только калибровка.<br>480 промптов на вариант, p = 0,003. В проде остаётся исходный квант.</div>
+
+  <div class="link">
+    <div class="t">GitHub</div>
+    <div class="u">vasiliy-mikhailov/qwen3.8_27b_ru</div>
+  </div>
+
+  <div class="foot">Фрагменты — настоящие ответы варианта с русской imatrix, сокращения — «…».<br>Ошибки считали вслепую LLM-разметчики и LLM-скептики.</div>
+</div>
+</body>
+</html>
